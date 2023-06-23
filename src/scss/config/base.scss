@@ -10,23 +10,16 @@
 * Например header__container, main__container и т.д.
 */
 [class*='__container'] {
-  max-width: rem($containerWidth + $mainOffset * 2);
+  max-width: ($containerWidth + $mainOffset * 2) + px;
   margin: 0 auto;
-  padding: 0 rem($mainOffset);
+  padding: 0 ($mainOffset) + px;
 }
 
-// Стили отзывчивых картинок (IBG) ============================================
-[class*='-ibg'] {
-  position: relative;
-
-  img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
+// Стили отзывчивых картинок ============================================
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 [class*='-ibg_contain'] {

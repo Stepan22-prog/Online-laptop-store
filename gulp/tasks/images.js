@@ -27,8 +27,6 @@ const images = () => {
       )
     )
     .pipe(gulp.dest(filePaths.build.img))
-    .pipe(gulp.src(filePaths.src.svg))
-    .pipe(gulp.dest(filePaths.build.img))
     .pipe(plugins.browserSync.stream());
 };
 

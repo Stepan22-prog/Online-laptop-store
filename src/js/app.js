@@ -58,3 +58,8 @@ new Accordion('.accordion', {
   defaultOpen: [], // [0,1]
   collapsedClass: 'open',
 });
+
+//мой код
+//dropDown
+import * as modules from './modules/modules';
+modules.dropDown();

@@ -20,7 +20,7 @@ const createSvgSprite = () => {
         },
       })
     )
-    .pipe(gulp.dest(filePaths.build.images));
+    .pipe(gulp.dest(filePaths.build.img));
 };
 
 export { createSvgSprite };

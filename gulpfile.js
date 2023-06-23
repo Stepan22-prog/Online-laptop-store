@@ -29,6 +29,7 @@ function watcher() {
   gulp.watch(filePaths.watch.scss, scss);
   gulp.watch(filePaths.watch.js, javaScript);
   gulp.watch(filePaths.watch.img, images);
+  gulp.watch(filePaths.watch.svgIcons, createSvgSprite);
 }
 
 /**
@@ -45,7 +46,8 @@ const devTasks = gulp.parallel(
   html,
   scss,
   javaScript,
-  images
+  images,
+  createSvgSprite
 );
 
 /**

@@ -1,24 +1,24 @@
-$maxWidth: 1920; // максимальная ширина страницы
-$minWidth: 320; // минимальная ширина телефона
-$maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета
+//$maxWidth: 1440; // максимальная ширина страницы
+//$minWidth: 360; // минимальная ширина телефона
+//$maxWidthContainer: 1; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1440; // ширина контейнера из макета
 
-$mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainOffset: 10; // отступы безопасности для контейнера
+$mainFont: 'Inter'; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
-$headerHeight: 100;
-$footerHeight: 100;
+//$headerHeight: 100;
+//$footerHeight: 100;
 
-$mainRadius: rem(10);
+//$mainRadius: rem(10);
 
 $whiteColor: #fff;
-$blackColor: #131313;
-$grayColor: #6f6f6f;
-$redColor: #ff4040;
-
-$firstAccentColor: $blackColor;
-$secondAccentColor: $redColor;
+$blackColor: #000;
+$yellowColor: #FF9000;
+$blueColor: #2C5E98;
+$greenColor: #AABE4E;
+$greyColor: #ADB5BD;
+$redColor: #BC4749;
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
