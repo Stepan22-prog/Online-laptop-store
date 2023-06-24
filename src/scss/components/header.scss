@@ -139,7 +139,6 @@ html.menu-open .header-menu-icon {
 
   &.active {
     .header-contacts__body {
-      height: 120px;
       transition: 0.4s;
       box-shadow: 0px 5px 8px 4px rgba($blueColor, 30%);
     }
@@ -157,7 +156,8 @@ html.menu-open .header-menu-icon {
 .header-contacts__body {
   position: absolute;
   top: 42px;
-  height: 0;
+  height: max-content;
+  max-height: 0;
   left: -46px;
   width: max-content;
   overflow: hidden;

@@ -277,21 +277,29 @@ export function spoilers() {
 }
 export function dropDown() {
     const dropDowns = document.querySelectorAll('[data-dropDown]');
-    if (dropDowns.length > 0) {
-        for (const dropDown of dropDowns) {
-            const dropDownBtn = dropDown.querySelector('[data-dropDown-button]');
-            const dropDownBody = dropDown.querySelector('[data-dropDown-body]');
-            dropDownBtn.addEventListener('click', () => {
+
+    dropDowns.forEach((dropDown) => {
+        const dropDownBtn = dropDown.querySelector('[data-dropDown-button]');
+        const dropDownBody = dropDown.querySelector('[data-dropDown-body]');
+
+        dropDownBtn.addEventListener('click', () => {
+            if (dropDownBody) {
+                const isActive = dropDown.classList.toggle('active');
+                dropDownBody.style.maxHeight = isActive ? `${dropDownBody.scrollHeight}px` : '0';
+            }
+        });
+
+        const outsideClickListener = (event) => {
+            if (!dropDown.contains(event.target)) {
+                dropDown.classList.remove('active');
                 if (dropDownBody) {
-                    dropDownBody.style.maxHeight = dropDown.classList.contains('active') ? '0px' : dropDownBody.scrollHeight + 'px';
+                    dropDownBody.style.maxHeight = '0';
                 }
-                dropDown.classList.toggle('active');
-            })
-            // dropDownBtn.addEventListener('mouseON', () => {
-            //     dropDown.classList.toggle('dropDown-active');
-            // })
-        }
-    }
+            }
+        };
+
+        window.addEventListener('click', outsideClickListener);
+    });
 }
 // Модуь работы с табами =======================================================================================================================================================================================================================
 /*
