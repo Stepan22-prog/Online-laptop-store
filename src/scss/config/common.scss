@@ -17,3 +17,49 @@ button {
         }
     }
 }
+
+.title-second {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+//form
+.form {}
+
+.form__input-label {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid $greyColor;
+    margin-bottom: 16px;
+}
+
+.form__textarea {
+    resize: none;
+    max-height: 135px;
+}
+
+.form__footer {}
+
+.form__btn {
+    width: 100%;
+    background: $yellowColor;
+    color: $whiteColor;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 16px;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
