@@ -76,4 +76,55 @@
             <li class="header-menu__item"><a href="">О нас</a></li>
         </ul>
     </nav>
+    <div class="cart">
+        <div class="cart__container">
+            <div class="cart__header">
+                <h2 class="cart__title">Ваша корзина</h2>
+                <button class="cart__close"></button>
+            </div>
+            <ul class="cart__products-list">
+                <li class="cart-product">
+                    <div class="cart-product__img"><img src="img/cart__img.jpg" alt="Laptop"></div>
+                    <svg class="cart-product__delete">
+                        <use xlink:href="img/icons/icons.svg#delete"></use>
+                    </svg>
+                    <h3 class="cart-product__name">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</h3>
+                    <div class="cart-product__row">
+                        <div class="cart-product__amount">
+                            <button class="cart-product__increase">+</button>
+                            <input type="text" class="cart-product__number" value="1"></input>
+                            <button class="cart-product__decrease">-</button>
+                        </div>
+                        <div class="cart-product__price">
+                            <p class="cart-product__old-price">19999 грн</p>
+                            <p class="cart-product__actual-price">15000 грн</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <form action="POST" class="form">
+                <label>
+                    <h3 class="form__input-label">Ваше имя и фамилия</h3>
+                    <input class="form__input" type="text" name="name" placeholder="ФИО">
+                </label>
+                <label>
+                    <h3 class="form__input-label">Электронная почта</h3>
+                    <input class="form__input" type="text" name="email" placeholder="mail@mail.com">
+                </label>
+                <label>
+                    <h3 class="form__input-label">Контактный телефон</h3>
+                    <input class="form__input" type="text" name="phone" placeholder="38 (0__) ___-__-__">
+                </label>
+                <label>
+                    <h3 class="form__input-label">Комментарий</h3>
+                    <textarea class="form__textarea" name="comment" cols="30" rows="10"
+                        placeholder="Адрес доставки и пожелания..."></textarea>
+                </label>
+                <div class="form__footer">
+                    <button class="form__btn" type="submit">Оформить заказ</button>
+                    <button type="button" class="cart__close">Продолжить покупки</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </header>
