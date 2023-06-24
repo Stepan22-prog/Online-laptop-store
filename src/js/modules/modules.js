@@ -429,9 +429,9 @@ export function tabs() {
 Сниппет (HTML): menu
 */
 export function menuInit() {
-    if (document.querySelector(".icon-menu")) {
+    if (document.querySelector(".js-icon-menu")) {
         document.addEventListener("click", function (e) {
-            if (bodyLockStatus && e.target.closest('.icon-menu')) {
+            if (bodyLockStatus && e.target.closest('.js-icon-menu')) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
             }

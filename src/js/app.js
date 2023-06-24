@@ -63,3 +63,5 @@ new Accordion('.accordion', {
 //dropDown
 import * as modules from './modules/modules';
 modules.dropDown();
+//menu
+modules.menuInit();
