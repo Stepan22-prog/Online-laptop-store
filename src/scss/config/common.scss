@@ -1,1 +1,19 @@
-// Заголовки, общие БЄМ блоки и проче...
+input,
+textarea {
+    &:focus {
+        border: 1px solid rgba($yellowColor, 30%);
+        box-shadow: 0px 0px 8px 2px $yellowColor;
+    }
+}
+
+button {
+    background: $yellowColor;
+    transition: $standartTrans;
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 8px 2px $yellowColor;
+            transition: $standartTrans;
+        }
+    }
+}

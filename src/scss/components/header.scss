@@ -123,6 +123,11 @@ html.menu-open .header-menu-icon {
   span {
     display: none;
   }
+
+  &:active {
+    box-shadow: 0px 0px 8px 2px $yellowColor;
+    transition: $standartTrans;
+  }
 }
 
 //========================================================================================================================================================
