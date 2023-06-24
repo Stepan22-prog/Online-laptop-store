@@ -3,7 +3,6 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  color: $fontColor;
 }
 
 *:before,
@@ -42,6 +41,7 @@ body {
   font-family: $fontFamily;
   font-weight: $fontWeight;
   line-height: 1;
+  color: $fontColor;
 }
 
 input,
@@ -70,6 +70,8 @@ button {
 
 a {
   text-decoration: none;
+  display: inline-block;
+  color: inherit;
 
   &:visited {
     text-decoration: none;

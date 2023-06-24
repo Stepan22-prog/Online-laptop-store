@@ -280,7 +280,11 @@ export function dropDown() {
     if (dropDowns.length > 0) {
         for (const dropDown of dropDowns) {
             const dropDownBtn = dropDown.querySelector('[data-dropDown-button]');
+            const dropDownBody = dropDown.querySelector('[data-dropDown-body]');
             dropDownBtn.addEventListener('click', () => {
+                if (dropDownBody) {
+                    dropDownBody.style.maxHeight = dropDown.classList.contains('active') ? '0px' : dropDownBody.scrollHeight + 'px';
+                }
                 dropDown.classList.toggle('active');
             })
             // dropDownBtn.addEventListener('mouseON', () => {
