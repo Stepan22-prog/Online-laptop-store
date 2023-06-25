@@ -66,7 +66,6 @@ modules.menuInit();
 //popup
 import PopupManager from './modules/PopupManager';
 new PopupManager();
-console.log(document.querySelector('[data-popup="cart"]'));
 //validation
 window.onload = function () {
   MaskedInput({
