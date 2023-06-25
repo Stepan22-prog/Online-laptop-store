@@ -6,6 +6,19 @@
     width: 100%;
     min-height: 100%;
     background: $whiteColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: $standartTrans;
+    overflow-y: hidden;
+    max-height: 100%;
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transition: $standartTrans;
+        overflow-y: auto;
+        max-height: none;
+    }
 }
 
 .cart__container {}
@@ -91,7 +104,7 @@
 .cart-product__old-price {
     font-size: 14px;
     color: $redColor;
-    text-decoration: line-through solid $redColor
+    text-decoration: line-through solid $redColor;
 }
 
 .cart-product__actual-price {}

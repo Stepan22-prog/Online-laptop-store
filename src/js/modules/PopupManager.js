@@ -27,7 +27,7 @@ class PopupManager extends Popup {
 
   togglePopup({ target }) {
     if (target.closest('[data-type]')) {
-      const popup = this.getPopupBySelector(target.dataset.type);
+      const popup = this.getPopupBySelector(target.closest('[data-type]').dataset.type);
 
       this.isOpenElements.forEach((modal) => this.closePopup(modal));
       this.openPopup(popup);

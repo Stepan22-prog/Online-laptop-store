@@ -11,7 +11,7 @@
 // import Swiper, { Navigation, Pagination } from 'swiper';
 
 import BaseHelpers from './helpers/BaseHelpers.js';
-import BurgerMenu from './modules/BurgerMenu';
+//import BurgerMenu from './modules/BurgerMenu';
 import Tabs from './modules/Tabs';
 import Accordion from './modules/Accordion.js';
 
@@ -36,7 +36,7 @@ BaseHelpers.headerFixed();
 /**
  *  Модуль для работы с меню (Бургер)
  * */
-new BurgerMenu().init();
+//new BurgerMenu().init();
 
 /**
  *  Библиотека для анимаций
@@ -66,6 +66,7 @@ modules.menuInit();
 //popup
 import PopupManager from './modules/PopupManager';
 new PopupManager();
+console.log(document.querySelector('[data-popup="cart"]'));
 //validation
 window.onload = function () {
   MaskedInput({
