@@ -33,7 +33,7 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
+  min-width: 360px;
   /** Поменять на clip - если используется в проекте position: sticky */
   overflow-x: hidden;
 }
