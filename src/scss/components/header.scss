@@ -24,9 +24,15 @@
   padding: 10px 0;
 }
 
-.header-interactive__body {
-  display: flex;
+.header-interactive__container {
+  display: grid;
   align-items: center;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 8px;
+
+  @media (min-width: 425px) {
+    gap: 15px;
+  }
 }
 
 .header-menu-icon {
@@ -36,7 +42,6 @@
   position: relative;
   left: -15px;
   background: transparent;
-  margin-right: 8px;
 
   span,
   &::before,
@@ -93,11 +98,10 @@ html.menu-open .header-menu-icon {
 //Header search
 .header-search {
   display: flex;
-  margin-right: 8px;
 }
 
 .header-search__input {
-  max-width: 190px;
+  width: 100%;
   font-size: 18px;
   padding: 5px;
   border-radius: 5px 0px 0px 5px;
@@ -128,9 +132,17 @@ html.menu-open .header-menu-icon {
     box-shadow: 0px 0px 8px 2px $yellowColor;
     transition: $standartTrans;
   }
+
+  @media (min-width: 425px) {
+    width: 50px;
+  }
 }
 
 //========================================================================================================================================================
+.header-interactive__group {
+  display: flex;
+}
+
 //Header contacts
 .header-contacts {
   max-width: 30px;
