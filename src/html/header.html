@@ -8,7 +8,7 @@
                 </button>
                 <div class="header-search">
                     <input type="text" class="header-search__input" placeholder="Поиск товаров">
-                    <button class="header-search__btn">
+                    <button class="header-search__btn button">
                         <svg width="18" height="18">
                             <use xlink:href="img/icons/icons.svg#search" fill="#fff"></use>
                         </svg>
@@ -16,13 +16,18 @@
                     </button>
                 </div>
                 <div class="header-interactive__group">
-                    <div data-dropDown class="header-contacts">
-                        <button data-dropDown-button class="header-contacts__btn">
+                    <div data-spollers class="header-contacts">
+
+                        <button type="button" data-spoller class="header-contacts__btn">
                             <svg width="30" height="30">
                                 <use xlink:href="img/icons/icons.svg#phone"></use>
                             </svg>
                         </button>
-                        <div data-dropDown-body class="header-contacts__body">
+                        <div class="header-contacts__body">
+                            <ul class="header-phones">
+                                <li class="header-phones__item"><a href="">088-544-4800</a></li>
+                                <li class="header-phones__item"><a href="">544-448-7859</a></li>
+                            </ul>
                             <ul class="header-socials">
                                 <li class="header-socials__item">
                                     <a href="">
@@ -39,17 +44,14 @@
                                     </a>
                                 </li>
                             </ul>
-                            <ul class="header-phones">
-                                <li class="header-phones__item"><a href="">088-544-4800</a></li>
-                                <li class="header-phones__item"><a href="">544-448-7859</a></li>
-                            </ul>
                         </div>
+
                     </div>
-                    <button data-type="cart" class="header-cart">
-                        <span class="header-cart__text">Корзина</span>
+                    <button data-type="cart" class="header-cart button">
                         <svg width="30" height="30">
                             <use xlink:href="img/icons/icons.svg#cart"></use>
                         </svg>
+                        <span class="header-cart__text">Корзина</span>
                         <span class="header-cart__number">3</span>
                     </button>
                 </div>
@@ -59,8 +61,8 @@
     <nav class="header__bottom">
         <ul class="header-menu">
             <li class="header-menu__item">
-                <div class="header-catalog" data-dropDown>
-                    <button class="header-catalog__btn" type="button" data-dropDown-button>Каталог</button>
+                <div class="header-catalog" data-spollers>
+                    <button class="header-catalog__btn" type="button" data-spoller>Каталог</button>
                     <ul data-dropDown-body class="header-catalog__list">
                         <li class="hedaer-catalog__item"><a href="">Ноутбуки</a></li>
                         <li class="hedaer-catalog__item"><a href="">Роутеры</a></li>

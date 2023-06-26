@@ -58,9 +58,9 @@ new Accordion('.accordion', {
 });
 
 //мой код
-//dropDown
+//spoilers
 import * as modules from './modules/modules';
-modules.dropDown();
+modules.spollers();
 //menu
 modules.menuInit();
 //popup

@@ -9,12 +9,32 @@
 
 //========================================================================================================================================================
 //Header top
-.header__top {}
+.header__top {
+  @media (min-width: $tablet) {
+    max-width: $containerWidth + px;
+    margin: 0 auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 20px;
+    gap: 80px;
+  }
+}
 
 .header__logo {
   height: 50px;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet) {
+    justify-content: start;
+  }
 }
 
 //========================================================================================================================================================
@@ -22,6 +42,11 @@
 .header-interactive {
   background: $blueColor;
   padding: 10px 0;
+
+  @media (min-width: $tablet) {
+    background: transparent;
+    padding: 0;
+  }
 }
 
 .header-interactive__container {
@@ -30,11 +55,23 @@
   grid-template-columns: max-content 1fr max-content;
   gap: 8px;
 
-  @media (min-width: 425px) {
+  @media (min-width: $mobileB) {
     gap: 15px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    justify-content: space-between;
+    grid-template-columns: 1fr max-content;
+  }
+
+  @media (min-width: $laptop) {
+    gap: 50px;
   }
 }
 
+//========================================================================================================================================================
+//Header burger icon
 .header-menu-icon {
   display: block;
   width: 30px;
@@ -74,6 +111,10 @@
     bottom: 0;
     transition: $standartTrans;
   }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 html.menu-open .header-menu-icon {
@@ -98,6 +139,7 @@ html.menu-open .header-menu-icon {
 //Header search
 .header-search {
   display: flex;
+  max-width: 700px;
 }
 
 .header-search__input {
@@ -113,6 +155,11 @@ html.menu-open .header-menu-icon {
     color: $greyColor;
     font-size: 14px;
   }
+
+  @media (min-width: $tablet) {
+    color: $blackColor;
+    border: 1px solid $greyColor;
+  }
 }
 
 .header-search__btn {
@@ -120,12 +167,17 @@ html.menu-open .header-menu-icon {
   align-items: center;
   justify-content: center;
   width: 35px;
-  background-color: $yellowColor;
   border-radius: 0px 5px 5px 0px;
   transform: translate(-1px, 0);
 
   span {
     display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+      font-size: 14px;
+      color: $whiteColor;
+    }
   }
 
   &:active {
@@ -133,8 +185,19 @@ html.menu-open .header-menu-icon {
     transition: $standartTrans;
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: $mobileB) {
     width: 50px;
+  }
+
+  @media (min-width: $tablet) {
+    width: max-content;
+    padding: 5px 8px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+    }
   }
 }
 
@@ -155,6 +218,14 @@ html.menu-open .header-menu-icon {
       box-shadow: 0px 5px 8px 4px rgba($blueColor, 30%);
     }
   }
+
+  @media (min-width: $tablet) {
+    max-width: none;
+  }
+
+  @media (min-width: $laptop) {
+    margin-right: 30px;
+  }
 }
 
 .header-contacts__btn {
@@ -163,33 +234,58 @@ html.menu-open .header-menu-icon {
   svg {
     fill: $whiteColor;
   }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .header-contacts__body {
   position: absolute;
   top: 42px;
-  height: max-content;
-  max-height: 0;
   left: -46px;
   width: max-content;
   overflow: hidden;
   transition: 0.4s;
   z-index: 2;
   background: $blueColor;
-  box-shadow: 0px;
+  box-shadow: none;
   border-radius: 0 0 5px 5px;
-  display: flex;
-  flex-direction: column-reverse;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    position: static;
+    background: transparent;
+    flex-direction: row-reverse;
+  }
 }
 
 .header-socials {
   display: flex;
   padding: 10px 5px;
+
+  @media (min-width: $tablet) {
+    align-items: center;
+    padding: 0;
+    margin-right: 15px
+  }
 }
 
 .header-socials__item {
   svg {
     fill: $whiteColor;
+    transition: $standartTrans;
+
+    @media (min-width: $tablet) {
+      fill: $blackColor;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        fill: $yellowColor;
+        transition: $standartTrans;
+      }
+    }
   }
 
   &:first-child {
@@ -206,6 +302,27 @@ html.menu-open .header-menu-icon {
   a {
     color: $whiteColor;
   }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    a {
+      font-weight: 500;
+      color: $blackColor;
+      transition: $standartTrans;
+    }
+  }
+
+  @media (any-hover: hover) {
+    a:hover {
+      color: $yellowColor;
+      transition: $standartTrans;
+    }
+  }
 }
 
 //========================================================================================================================================================
@@ -217,13 +334,36 @@ html.menu-open .header-menu-icon {
   svg {
     fill: $whiteColor;
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    background: $yellowColor;
+    border-radius: 5px;
+    padding: 5px 8px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
 }
 
 .header-cart__text {
   display: none;
+
+  @media (min-width: $tablet) {
+    display: inline-block;
+    font-size: 14px;
+    color: $whiteColor;
+    margin-left: 7px;
+  }
 }
 
 .header-cart__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: -5px;
   right: -5px;
@@ -233,6 +373,14 @@ html.menu-open .header-menu-icon {
   color: $whiteColor;
   border-radius: 50%;
   font-size: 11px;
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    top: -10px;
+    right: -10px;
+  }
 }
 
 //========================================================================================================================================================
@@ -250,6 +398,11 @@ html.menu-open .header-menu-icon {
   a {
     width: 100%;
   }
+
+  @media (min-width: $tablet) {
+    height: auto;
+
+  }
 }
 
 html.menu-open .header__bottom {
@@ -257,14 +410,22 @@ html.menu-open .header__bottom {
   height: calc(100vh - (53px + 50px));
 }
 
-.header-menu {}
+.header-menu {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 .header-menu__item {
-  padding: 10px;
   border-bottom: 1px solid $whiteColor;
-  transition: $standartTrans;
 
-  &:active {
+  a {
+    padding: 10px;
+    transition: $standartTrans;
+  }
+
+  a:active {
     padding-left: 20px;
     transition: $standartTrans;
   }
@@ -275,12 +436,7 @@ html.menu-open .header__bottom {
   transition: none;
 }
 
-.header-catalog {
-  &.active .header-catalog__btn::after {
-    transform: rotate(90deg);
-    transition: $standartTrans;
-  }
-}
+.header-catalog {}
 
 .header-catalog__btn {
   padding: 10px;
@@ -302,23 +458,26 @@ html.menu-open .header__bottom {
     height: 20px;
     transition: $standartTrans;
   }
+
+  &._spoller-active::after {
+    transform: rotate(90deg);
+    transition: $standartTrans;
+  }
 }
 
-.header-catalog__list {
-  max-height: 0;
-  overflow: hidden;
-  transition: $standartTrans;
-}
+.header-catalog__list {}
 
 .hedaer-catalog__item {
-  padding: 10px 10px 10px 20px;
-  transition: $standartTrans;
+  a {
+    padding-left: 20px;
+    transition: $standartTrans;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid $whiteColor;
   }
 
-  &:active {
+  a:active {
     padding-left: 30px;
     transition: $standartTrans;
   }

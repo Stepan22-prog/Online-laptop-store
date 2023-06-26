@@ -13,6 +13,14 @@
   max-width: ($containerWidth + $mainOffset * 2) + px;
   margin: 0 auto;
   padding: 0 ($mainOffset) + px;
+
+  @media (min-width: $mobileB) {
+    padding: 0 15px;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 0 15px;
+  }
 }
 
 // Стили отзывчивых картинок ============================================
