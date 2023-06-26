@@ -401,7 +401,7 @@ html.menu-open .header-menu-icon {
 
   @media (min-width: $tablet) {
     height: auto;
-
+    overflow-y: visible;
   }
 }
 
@@ -414,6 +414,8 @@ html.menu-open .header__bottom {
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -429,6 +431,26 @@ html.menu-open .header__bottom {
     padding-left: 20px;
     transition: $standartTrans;
   }
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+
+    a {
+      padding: 15px;
+      transition: 0.1s;
+    }
+
+    a:active {
+      padding-left: 15px;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover>a {
+      color: $yellowColor;
+      transition: 0.1s;
+    }
+  }
 }
 
 .header-menu__item:first-child {
@@ -436,7 +458,9 @@ html.menu-open .header__bottom {
   transition: none;
 }
 
-.header-catalog {}
+.header-catalog {
+  position: relative;
+}
 
 .header-catalog__btn {
   padding: 10px;
@@ -463,9 +487,33 @@ html.menu-open .header__bottom {
     transform: rotate(90deg);
     transition: $standartTrans;
   }
+
+  @media (min-width: $tablet) {
+    padding: 14px 27px 14px 14px;
+
+    &::after {
+      position: absolute;
+      right: 7px;
+      top: 18px;
+      content: '';
+      display: inline-block;
+      background-image: url('../../img/icons/icons.svg#arrow-right');
+      width: 15px;
+      height: 15px;
+      transition: $standartTrans;
+    }
+  }
 }
 
-.header-catalog__list {}
+.header-catalog__list {
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 49px;
+    z-index: 2;
+    background: $blueColor;
+    min-width: 200px;
+  }
+}
 
 .hedaer-catalog__item {
   a {
@@ -480,5 +528,12 @@ html.menu-open .header__bottom {
   a:active {
     padding-left: 30px;
     transition: $standartTrans;
+  }
+
+  @media (any-hover: hover) {
+    a:hover {
+      color: $yellowColor;
+      transition: 0.1s;
+    }
   }
 }

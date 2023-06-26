@@ -208,6 +208,14 @@ export function spollers() {
                     spollersBlock.classList.add('_spoller-init');
                     initSpollerBody(spollersBlock);
                     spollersBlock.addEventListener("click", setSpollerAction);
+                    spollersBlock.addEventListener("mouseover", setSpollerAction);
+                    spollersBlock.children[1]?.addEventListener("mouseleave", () => hideSpollersBody(spollersBlock));
+                    const outsideClickListener = (event) => {
+                        if (!spollersBlock.contains(event.target)) {
+                            hideSpollersBody(spollersBlock)
+                        }
+                    };
+                    document.addEventListener('click', outsideClickListener);
                 } else {
                     spollersBlock.classList.remove('_spoller-init');
                     initSpollerBody(spollersBlock, false);
@@ -257,21 +265,6 @@ export function spollers() {
                 spollerActiveTitle.classList.remove('_spoller-active');
                 _slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
             }
-        }
-        // Закрытие при клике вне спойлера
-        const spollersClose = document.querySelectorAll('[data-spoller-close]');
-        if (spollersClose.length) {
-            document.addEventListener("click", function (e) {
-                const el = e.target;
-                if (!el.closest('[data-spollers]')) {
-                    spollersClose.forEach(spollerClose => {
-                        const spollersBlock = spollerClose.closest('[data-spollers]');
-                        const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
-                        spollerClose.classList.remove('_spoller-active');
-                        _slideUp(spollerClose.nextElementSibling, spollerSpeed);
-                    });
-                }
-            });
         }
     }
 }
