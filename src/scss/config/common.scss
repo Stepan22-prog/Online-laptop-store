@@ -18,15 +18,45 @@ textarea {
     }
 }
 
-.title-second {
-    font-size: 20px;
+.title-first {
+    font-size: 30px;
     font-weight: 700;
+
+    @media (min-width: $tablet) {
+        font-size: 36px;
+    }
+}
+
+.title-second {
+    font-size: 25px;
+    font-weight: 500;
+
+    @media (min-width: $tablet) {
+        font-size: 32px;
+    }
 }
 
 //form
-.form {}
+.form {
+    @media (min-width: $laptop) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
-.form__input-label {
+        &>* {
+            flex: 100%;
+        }
+    }
+}
+
+@media (min-width: $laptop) {
+    .form__input-label._half-row {
+        flex-basis: 48%;
+        flex-grow: 0;
+    }
+}
+
+.form__input-title {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 8px;
@@ -47,7 +77,12 @@ textarea {
     max-height: 135px;
 }
 
-.form__footer {}
+.form__footer {
+    @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 .form__btn {
     width: 100%;
@@ -61,5 +96,9 @@ textarea {
 
     &:active {
         transform: scale(0.9);
+    }
+
+    @media (min-width: $tablet) {
+        max-width: 200px;
     }
 }
