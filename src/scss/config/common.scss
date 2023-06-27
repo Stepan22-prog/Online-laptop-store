@@ -17,6 +17,7 @@ section {
 .button {
     background: $yellowColor;
     transition: $standartTrans;
+    color: $whiteColor;
 
     @media (any-hover: hover) {
         &:hover {
