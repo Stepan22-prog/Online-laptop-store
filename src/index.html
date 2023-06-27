@@ -7,9 +7,9 @@
 <body>
   <div class="wrapper">
     @@include('html/header.html')
-
+    @@include('html/cart-popup.html')
+    @@include('html/callback.html')
     <main class="page">
-      @@include('html/cart-popup.html')
       <section class="categories">
         <div class="categories__container">
           <ul class="categories__list">
@@ -140,6 +140,16 @@
           </button>
         </div>
       </section>
+      <button class="to-top button-action">
+        <svg width="50" height="50">
+          <use xlink:href="img/icons/icons.svg#more"></use>
+        </svg>
+      </button>
+      <button data-type="callback" class="callback__btn button-action">
+        <svg width="50" height="50">
+          <use xlink:href="img/icons/icons.svg#phone"></use>
+        </svg>
+      </button>
     </main>
 
     @@include('html/footer.html')
