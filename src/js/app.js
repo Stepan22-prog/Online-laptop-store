@@ -8,7 +8,7 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 import BaseHelpers from './helpers/BaseHelpers.js';
 //import BurgerMenu from './modules/BurgerMenu';

@@ -49,4 +49,13 @@ img {
 .page {
   position: relative;
   flex: 1 1 auto;
+  margin-top: 124px;
+
+  @media (min-width: $tablet) {
+    margin-top: 155px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-top: 165px;
+  }
 }
