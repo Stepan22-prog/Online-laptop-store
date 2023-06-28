@@ -1,0 +1,18 @@
+.footer {
+    display: none;
+    background: $blueColor;
+}
+
+.footer__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-items: center;
+}
+
+.footer-column {}
+
+.footer-column__title {}
+
+.footer-column__list {}
+
+.footer-column__item {}
