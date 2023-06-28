@@ -1,4 +1,7 @@
 .product-card {
+    height: initial;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     border: 1px solid $greyColor;
     border-radius: 10px;
@@ -33,6 +36,7 @@
 }
 
 .product-card__title {
+    flex: auto;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
