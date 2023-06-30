@@ -59,4 +59,22 @@
     border-radius: 8px;
     background: $blueColor;
     padding: 5px;
+    margin-bottom: 15px;
+}
+
+.calalog__products {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 350px));
+    gap: 10px;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet) {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    @media (min-width: $laptop) {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 350px));
+    }
 }

@@ -1,0 +1,45 @@
+.pagging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagging__arrow {
+    display: flex;
+    align-items: center;
+
+    svg {
+        fill: $blueColor;
+    }
+}
+
+.pagging__arrow_left {}
+
+.pagging__list {
+    display: flex;
+}
+
+.pagging__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25px;
+    height: 25px;
+    margin-right: 1px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $whiteColor;
+    background: $blueColor;
+    border: 1px solid $blueColor;
+
+    &.pagging__item_active {
+        color: $blueColor;
+        background: transparent;
+    }
+}
+
+.pagging__item_active {}
+
+.pagging__arrow_right {
+    transform: rotate(180deg);
+}
