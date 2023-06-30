@@ -1,0 +1,100 @@
+<aside data-popup="filter" class="filter">
+  <button class="filter__close button-close">
+    <svg width="35" height="35">
+      <use xlink:href="img/icons/icons.svg#close-white"></use>
+    </svg>
+  </button>
+  <ul class="filter-applied">
+    <li class="filter-applied__item">
+      <h3 class="filter-applied-item__title">Процессор:</h3>
+      <ul>
+        <li class="filter-applied-item__option"><button class="button">Intel Core I5</button></li>
+        <li class="filter-applied-item__option"><button class="button">AMD ryzen 7</button></li>
+      </ul>
+    </li>
+    <li class="filter-applied__item">
+      <h3 class="filter-applied-item__title">Оперативная память:</h3>
+      <ul>
+        <li class="filter-applied-item__option"><button class="button">8 ГБ</button></li>
+      </ul>
+    </li>
+  </ul>
+  <form data-spollers class="filter__body">
+    <button class="filter__reset" type="reset">Сбросить все</button>
+    <fieldset class="filter-group">
+      <legend class="filter-group__title filter-group__title_price">Цена</legend>
+      <div class="filter-group__price">
+        <input type="number" class="filter-group__input" id="minPrice" value="100">
+        <span class="filter-group__line"></span>
+        <input type="number" class="filter-group__input" id="maxPrice" value="1000">
+        <button class="filter-group__btn button">Ок</button>
+      </div>
+      <div class="filter-group__range" id="range"></div>
+    </fieldset>
+    <fieldset class="filter-group">
+      <legend data-spoller class="filter-group__title _spoller-active">Процессор</legend>
+      <ul class="filter-group__list">
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="Intel-Core-I5">
+          <label class="filter-group__label" for="Intel-Core-I5">Intel Core I5</label>
+          <span class="filter-group__info">10</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="AMD-ryzen-7">
+          <label class="filter-group__label" for="AMD-ryzen-7">AMD ryzen 7</label>
+          <span class="filter-group__info">15</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="AMD-ryzen-5">
+          <label class="filter-group__label" for="AMD-ryzen-5">AMD ryzen 5</label>
+          <span class="filter-group__info">1</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="Intel-Core-I7">
+          <label class="filter-group__label" for="Intel-Core-I7">Intel Core I7</label>
+          <span class="filter-group__info">20</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="Intel-Core">
+          <label class="filter-group__label" for="Intel-Core">Intel Core</label>
+          <span class="filter-group__info">8</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="Intel-Core-I3">
+          <label class="filter-group__label" for="Intel-Core-I3">Intel Core I3</label>
+          <span class="filter-group__info">3</span>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset data-spollers class="filter-group">
+      <legend data-spoller class="filter-group__title">Тип матрицы:</legend>
+      <ul class="filter-group__list">
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="IPS">
+          <label class="filter-group__label" for="IPS">IPS</label>
+          <span class="filter-group__info">10</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="OLED">
+          <label class="filter-group__label" for="OLED">OLED</label>
+          <span class="filter-group__info">15</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="SVA">
+          <label class="filter-group__label" for="SVA">SVA</label>
+          <span class="filter-group__info">1</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="TN">
+          <label class="filter-group__label" for="TN">TN</label>
+          <span class="filter-group__info">20</span>
+        </li>
+        <li class="filter-group__item">
+          <input class="filter-group__checkbox visually-hidden" type="checkbox" name="" id="TN+film">
+          <label class="filter-group__label" for="TN+film">TN+film</label>
+          <span class="filter-group__info">8</span>
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+</aside>

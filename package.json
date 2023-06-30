@@ -78,6 +78,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "nouislider": "^15.7.1",
     "swiper": "^8.4.5"
   }
 }

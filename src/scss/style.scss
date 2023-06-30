@@ -29,6 +29,7 @@
 * Подключение custom scrollbar для всего сайта
 */
 //@import 'config/scrollbar';
+@import 'config/nouislider.scss';
 
 /**
 * Общие параметры
@@ -50,6 +51,8 @@
 @import 'components/new';
 @import 'components/product-card';
 @import 'components/callback';
+@import 'components/catalog';
+@import 'components/filter';
 //@import 'components/tabs';
 //@import 'components/accordion';
 @import 'components/footer';
