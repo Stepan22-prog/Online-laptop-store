@@ -6,6 +6,7 @@
   width: 100%;
   z-index: 2;
   background: $whiteColor;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .22);
 }
 
 //========================================================================================================================================================
@@ -524,6 +525,7 @@ html.menu-open .header__bottom {
     max-height: calc(100vh - 140px);
     width: 400px;
     max-width: max-content;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .33);
   }
 }
 

@@ -208,8 +208,11 @@ export function spollers() {
                     spollersBlock.classList.add('_spoller-init');
                     initSpollerBody(spollersBlock);
                     spollersBlock.addEventListener("click", setSpollerAction);
-                    spollersBlock.addEventListener("mouseover", setSpollerAction);
-                    spollersBlock.children[1]?.addEventListener("mouseleave", () => hideSpollersBody(spollersBlock));
+                    const hoverSpoller = spollersBlock.hasAttribute('data-hover');
+                    if (hoverSpoller) {
+                        spollersBlock.addEventListener("mouseover", setSpollerAction);
+                        spollersBlock.children[1]?.addEventListener("mouseleave", () => hideSpollersBody(spollersBlock));
+                    }
                     const outsideClickListener = (event) => {
                         if (!spollersBlock.contains(event.target)) {
                             hideSpollersBody(spollersBlock)

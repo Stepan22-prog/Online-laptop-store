@@ -17,14 +17,14 @@
                     @@include('html/filter.html')
                     <div class="calatlog__right-coloumn">
                         <h1 class="catalog-title title-first">Ноутбуки</h1>
-                        <select data-speed="300" name="form[]" class="sort">
-                            <option value="1" selected>По возрастанию цены
-                            </option>
-                            <option value="2">По убыванию цены</option>
-                            <option value="3">По убыванию цены</option>
-                            <option value="4">По убыванию цены</option>
-                        </select>
-                        <button data-type="filter" class="filter__btn">Фильтры</button>
+                        <div class="catalog__row">
+                            <select data-speed="300" name="form[]" class="sort">
+                                <option value="1" selected>По возрастанию цены
+                                </option>
+                                <option value="2">По убыванию цены</option>
+                            </select>
+                            <button data-type="filter" class="filter__btn">Фильтры</button>
+                        </div>
                         <section class="calalog__products">
                             <div class="product-card">
                                 <div class="product-card__img"><a href=""><img src="img/category.jpg" alt="laptop"></a>

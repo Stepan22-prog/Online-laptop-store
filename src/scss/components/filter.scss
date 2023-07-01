@@ -5,7 +5,7 @@
     z-index: 5;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     background: $blueColor;
     opacity: 0;
@@ -18,6 +18,29 @@
         transition: $standartTrans;
         overflow-y: auto;
     }
+
+    @media (min-width: $laptop) {
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        overflow-y: auto;
+        z-index: 0;
+    }
+}
+
+.filter__btn {
+    width: 100%;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: $blueColor;
+    padding: 7px 5px;
+    margin-bottom: 15px;
+
+    @media (min-width: $laptop) {
+        display: none;
+    }
 }
 
 .filter__close {
@@ -25,10 +48,19 @@
     text-align: right;
     background: transparent;
     padding: 8px 8px 0px 0px;
+
+    @media (min-width: $laptop) {
+        display: none;
+    }
 }
 
 .filter-applied {
     margin: 10px;
+
+    @media (min-width: $tablet) {
+        font-size: 18px;
+        margin: 10px 15px;
+    }
 }
 
 .filter-applied__item {
@@ -69,6 +101,10 @@
             height: 20px;
             background: url('../img/icons/icons.svg#close-white');
         }
+
+        @media (min-width: $tablet) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -80,6 +116,18 @@
     text-decoration: underline;
     background: transparent;
     margin: 0px 10px 16px 10px;
+    transition: 0.2s;
+
+    @media (min-width: $tablet) {
+        font-size: 18px;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $yellowColor;
+            transition: 0.2s;
+        }
+    }
 }
 
 .filter-group {}
@@ -109,6 +157,11 @@
         transform: rotate(90deg);
         transition: $standartTrans;
     }
+
+    @media (min-width: $tablet) {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 .filter-group__title_price {
@@ -129,6 +182,10 @@
     padding: 5px;
     font-size: 20px;
     border-radius: 5px;
+
+    @media (min-width: $laptop) {
+        max-width: 95px;
+    }
 }
 
 .filter-group__line {
@@ -149,13 +206,15 @@
     background: $whiteColor;
     border: none;
     box-shadow: none;
-    margin: 0 14px 14px 14px;
+    margin: 0px 20px 14px 17px;
+    height: 15px;
 
     .noUi-connect {
         background: $greenColor;
     }
 
     .noUi-handle {
+        top: -8px;
         width: 30px;
         height: 30px;
         border-radius: 50px;
@@ -184,6 +243,10 @@
 
     &:not(:last-child) {
         margin-bottom: 8px;
+
+        @media (min-width: $tablet) {
+            margin-bottom: 12px;
+        }
     }
 }
 
@@ -205,6 +268,12 @@
 }
 
 .filter-group__label {
+    @media (any-hover: hover) {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     position: relative;
     font-size: 16px;
     color: $whiteColor;
@@ -221,6 +290,10 @@
         left: 0;
         background: $whiteColor;
         border-radius: 3px;
+    }
+
+    @media (min-width: $tablet) {
+        font-size: 18px;
     }
 }
 

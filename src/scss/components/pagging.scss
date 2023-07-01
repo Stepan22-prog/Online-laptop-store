@@ -11,6 +11,13 @@
     svg {
         fill: $blueColor;
     }
+
+    @media (min-width: $tablet) {
+        svg {
+            width: 35px;
+            height: 35px;
+        }
+    }
 }
 
 .pagging__arrow_left {}
@@ -35,6 +42,18 @@
     &.pagging__item_active {
         color: $blueColor;
         background: transparent;
+    }
+
+    @media (min-width: $mobileB) {
+        min-width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    @media (min-width: $tablet) {
+        min-width: 35px;
+        height: 35px;
+        font-size: 22px;
     }
 }
 
