@@ -1,0 +1,65 @@
+.contacts {
+    margin-top: 16px;
+
+    @media (min-width: $tablet) {
+        display: flex;
+    }
+}
+
+.contacts__left-column {
+    @media (min-width: $tablet) {
+        flex: 50%;
+        margin-right: 10px;
+    }
+
+    @media (min-width: $laptop) {
+        flex: 50%;
+        margin-right: 20px;
+    }
+}
+
+.phones {
+    margin-bottom: 16px;
+}
+
+.phones__title {
+    margin-bottom: 10px;
+}
+
+.phones__list {
+    margin-left: 30px;
+    list-style: disc;
+}
+
+.phones__item {
+    list-style: disc;
+    font-size: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}
+
+.form__title {
+    margin-bottom: 10px;
+}
+
+.map {
+    @media (min-width: $tablet) {
+        flex: 50%;
+    }
+}
+
+.map__title {
+    margin-bottom: 10px;
+}
+
+.map__iframe iframe {
+    width: 100%;
+    min-width: 340px;
+    min-height: 340px;
+
+    @media (min-width: $laptop) {
+        min-height: 400px;
+    }
+}
