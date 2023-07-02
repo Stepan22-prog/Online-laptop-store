@@ -50,7 +50,7 @@
     display: none;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%);
     background: transparent;
 
     @media (min-width: $laptop) {
@@ -64,7 +64,7 @@
 
 .swiper-button-next {
     right: 0;
-    transform: rotate(180deg);
+    transform: rotate(180deg) translate(0);
 }
 
 .swiper-button-disabled {
