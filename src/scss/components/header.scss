@@ -267,6 +267,7 @@ html.menu-open .header-menu-icon {
 .header-socials {
   display: flex;
   padding: 10px 5px;
+  list-style: none;
 
   @media (min-width: $tablet) {
     align-items: center;
@@ -301,6 +302,7 @@ html.menu-open .header-menu-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  list-style: none;
 }
 
 .header-phones__item {
@@ -420,6 +422,8 @@ html.menu-open .header__bottom {
 }
 
 .header-menu {
+  list-style: none;
+
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -469,6 +473,7 @@ html.menu-open .header__bottom {
 
 .header-catalog {
   position: relative;
+  height: 100%;
 }
 
 .header-catalog__btn {
@@ -479,6 +484,7 @@ html.menu-open .header__bottom {
   color: inherit;
   position: relative;
   width: 100%;
+  height: 100%;
   text-align: left;
 
   &::after {
@@ -515,6 +521,8 @@ html.menu-open .header__bottom {
 }
 
 .header-catalog__list {
+  list-style: none;
+
   @media (min-width: $tablet) {
     position: absolute;
     top: 49px;

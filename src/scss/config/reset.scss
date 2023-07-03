@@ -43,7 +43,7 @@ body {
   font-size: $fontSize + px;
   font-family: $fontFamily;
   font-weight: $fontWeight;
-  line-height: 1;
+  line-height: 1.2;
   color: $fontColor;
 }
 
@@ -80,10 +80,10 @@ a {
   }
 }
 
-ul,
-li {
-  list-style: none;
-}
+// ul,
+// li {
+//   list-style: none;
+// }
 
 img {
   vertical-align: top;

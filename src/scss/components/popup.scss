@@ -24,7 +24,6 @@
 .popup__content {
     background: $whiteColor;
     height: max-content;
-    min-height: 100%;
     width: 100%;
 
     @media (min-width: $laptop) {

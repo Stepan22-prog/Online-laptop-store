@@ -1,4 +1,6 @@
-.cart__products-list {}
+.cart__products-list {
+    list-style: none;
+}
 
 .cart-product {
     position: relative;
@@ -86,6 +88,7 @@
 .cart-product__price {}
 
 .cart-product__old-price {
+    margin-bottom: 0;
     font-size: 14px;
     color: $redColor;
     text-decoration: line-through solid $redColor;
@@ -96,7 +99,9 @@
     }
 }
 
-.cart-product__actual-price {}
+.cart-product__actual-price {
+    margin-bottom: 0;
+}
 
 .cart__continue {
     width: 100%;

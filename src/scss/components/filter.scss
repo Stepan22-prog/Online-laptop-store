@@ -56,10 +56,15 @@
 
 .filter-applied {
     margin: 10px;
+    list-style: none;
 
     @media (min-width: $tablet) {
         font-size: 18px;
         margin: 10px 15px;
+    }
+
+    ul {
+        list-style: none;
     }
 }
 
@@ -236,6 +241,7 @@
 .filter-group__list {
     padding: 0 10px;
     margin-bottom: 10px;
+    list-style: none;
 }
 
 .filter-group__item {
