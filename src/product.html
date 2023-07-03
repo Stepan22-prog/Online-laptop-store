@@ -18,27 +18,31 @@
                     <div class="gallery">
                         <div class="gallery__slider swiper">
                             <div class="gallery__wrapper swiper-wrapper">
-                                <div class="gallery__slide swiper-slide"><img src="img/category.jpg" alt=""></div>
-                                <div class="gallery__slide swiper-slide"><img src="img/product2.png" alt=""></div>
-                                <div class="gallery__slide swiper-slide"><img src="img/product3.webp" alt=""></div>
-                                <div class="gallery__slide swiper-slide"><img src="img/product4.png" alt=""></div>
+                                <div data-type="gallery" class="gallery__slide swiper-slide"><img
+                                        src="img/product5.webp" alt=""></div>
+                                <div data-type="gallery" class="gallery__slide swiper-slide"><img src="img/product2.png"
+                                        alt=""></div>
+                                <div data-type="gallery" class="gallery__slide swiper-slide"><img
+                                        src="img/product3.webp" alt=""></div>
+                                <div data-type="gallery" class="gallery__slide swiper-slide"><img src="img/product4.png"
+                                        alt=""></div>
                             </div>
                         </div>
                         <div class="thumbs-slider__wrapper">
                             <div class="thumbs__slider swiper">
                                 <div class="thumbs__wrapper swiper-wrapper">
-                                    <div class="thumbs__slide swiper-slide"><img src="img/category.jpg" alt=""></div>
+                                    <div class="thumbs__slide swiper-slide"><img src="img/product5.webp" alt=""></div>
                                     <div class="thumbs__slide swiper-slide"><img src="img/product2.png" alt=""></div>
                                     <div class="thumbs__slide swiper-slide"><img src="img/product3.webp" alt=""></div>
                                     <div class="thumbs__slide swiper-slide"><img src="img/product4.png" alt=""></div>
                                 </div>
                             </div>
-                            <button class="swiper-button-prev">
+                            <button class="thumbs-prev swiper-button-prev">
                                 <svg width="30" height="30">
                                     <use xlink:href="img/icons/icons.svg#swiper-arrow"></use>
                                 </svg>
                             </button>
-                            <button class="swiper-button-next">
+                            <button class="thumbs-next swiper-button-next">
                                 <svg width="30" height="30">
                                     <use xlink:href="img/icons/icons.svg#swiper-arrow"></use>
                                 </svg>
@@ -163,6 +167,7 @@
             </button>
         </main>
         @@include('html/footer.html')
+        @@include('html/gallery-popup.html')
         @@include('html/cart-popup.html')
         @@include('html/callback.html')
     </div>

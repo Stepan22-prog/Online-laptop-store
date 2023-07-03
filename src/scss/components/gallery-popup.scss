@@ -1,0 +1,41 @@
+.gallery-popup {
+    .popup__container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.gallery-popup__content {
+    position: relative;
+}
+
+.gallery-popup__slider {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    max-width: 95%;
+    max-height: 100%;
+
+    @media (min-width: $laptop) {
+        position: static;
+        transform: translate(0);
+    }
+}
+
+.gallery-popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.gallery-popup-prev {
+    display: block;
+    z-index: 2;
+    transform: translate(-30%);
+}
+
+.gallery-popup-next {
+    display: block;
+    z-index: 2;
+}

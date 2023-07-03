@@ -8,7 +8,7 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
-import Swiper, { Autoplay, Navigation, Pagination, Thumbs } from 'swiper';
+import Swiper, { Autoplay, Navigation, Pagination, Thumbs, Zoom } from 'swiper';
 
 import BaseHelpers from './helpers/BaseHelpers.js';
 //import BurgerMenu from './modules/BurgerMenu';
@@ -115,8 +115,8 @@ if (document.querySelector('.new__slider')) {
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.new-next',
+      prevEl: '.new-prev',
     },
     autoplay: {
       delay: 3000,
@@ -124,6 +124,7 @@ if (document.querySelector('.new__slider')) {
   });
 }
 if (document.querySelector('.gallery__slider')) {
+  const galleryOpen = document.querySelectorAll('.gallery__slide');
   const swiperThumb = new Swiper('.thumbs__slider', {
     // configure Swiper to use modules
     modules: [Navigation],
@@ -135,8 +136,8 @@ if (document.querySelector('.gallery__slider')) {
 
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.thumbs-next',
+      prevEl: '.thumbs-prev',
     },
   });
   const swiper = new Swiper('.gallery__slider', {
@@ -153,6 +154,23 @@ if (document.querySelector('.gallery__slider')) {
       swiper: swiperThumb,
     },
   });
+  const galleryPopup = new Swiper('.gallery-popup__slider', {
+    // configure Swiper to use modules
+    modules: [Navigation, Zoom],
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 10,
+    speed: 800,
+    navigation: {
+      nextEl: '.gallery-popup-next',
+      prevEl: '.gallery-popup-prev',
+    },
+    zoom: true,
+    maxRatio: 2,
+  });
+  galleryOpen.forEach(elem => elem.addEventListener('click', () => {
+    galleryPopup.slideTo(swiper.activeIndex, 0)
+  }))
 }
 //scroll
 const btn = document.querySelector('.to-top');
