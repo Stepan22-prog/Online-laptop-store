@@ -12,7 +12,7 @@
 //========================================================================================================================================================
 //Header top
 .header__top {
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     max-width: $containerWidth + px;
     margin: 0 auto;
     padding: 15px;
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     justify-content: start;
   }
 }
@@ -45,7 +45,7 @@
   background: $blueColor;
   padding: 10px 0;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     background: transparent;
     padding: 0;
   }
@@ -61,7 +61,7 @@
     gap: 15px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     padding: 0;
     justify-content: space-between;
     grid-template-columns: 1fr max-content;
@@ -114,7 +114,7 @@
     transition: $standartTrans;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: none;
   }
 }
@@ -141,6 +141,8 @@ html.menu-open .header-menu-icon {
 //Header search
 .header-search {
   display: flex;
+  justify-self: center;
+  width: 100%;
   max-width: 700px;
 }
 
@@ -159,7 +161,7 @@ html.menu-open .header-menu-icon {
     font-size: 14px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     color: $blackColor;
     border: 1px solid $greyColor;
   }
@@ -223,7 +225,7 @@ html.menu-open .header-menu-icon {
     }
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     max-width: none;
   }
 
@@ -239,7 +241,7 @@ html.menu-open .header-menu-icon {
     fill: $whiteColor;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: none;
   }
 }
@@ -256,7 +258,7 @@ html.menu-open .header-menu-icon {
   box-shadow: none;
   border-radius: 0 0 5px 5px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: flex;
     position: static;
     background: transparent;
@@ -269,7 +271,7 @@ html.menu-open .header-menu-icon {
   padding: 10px 5px;
   list-style: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     align-items: center;
     padding: 0;
     margin-right: 15px
@@ -281,7 +283,7 @@ html.menu-open .header-menu-icon {
     fill: $whiteColor;
     transition: $standartTrans;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $laptop) {
       fill: $blackColor;
     }
 
@@ -313,7 +315,7 @@ html.menu-open .header-menu-icon {
     color: $whiteColor;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     padding: 0;
 
     &:not(:last-child) {
@@ -345,7 +347,7 @@ html.menu-open .header-menu-icon {
     fill: $whiteColor;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: flex;
     align-items: center;
     background: $yellowColor;
@@ -363,7 +365,7 @@ html.menu-open .header-menu-icon {
 .header-cart__text {
   display: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: inline-block;
     font-size: 14px;
     color: $whiteColor;
@@ -385,7 +387,7 @@ html.menu-open .header-menu-icon {
   border-radius: 50%;
   font-size: 11px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     font-size: 14px;
     width: 22px;
     height: 22px;
@@ -410,7 +412,7 @@ html.menu-open .header-menu-icon {
     width: 100%;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     height: auto;
     overflow-y: visible;
   }
@@ -424,7 +426,7 @@ html.menu-open .header__bottom {
 .header-menu {
   list-style: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: flex;
     flex-wrap: wrap;
     max-width: 1440px;
@@ -445,7 +447,7 @@ html.menu-open .header__bottom {
     transition: $standartTrans;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     border-bottom: none;
 
     a {
@@ -503,7 +505,7 @@ html.menu-open .header__bottom {
     transition: $standartTrans;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     padding: 14px 27px 14px 14px;
 
     &::after {
@@ -523,7 +525,7 @@ html.menu-open .header__bottom {
 .header-catalog__list {
   list-style: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     position: absolute;
     top: 49px;
     z-index: 2;
