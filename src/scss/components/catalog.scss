@@ -82,8 +82,8 @@
     margin-bottom: 15px;
 
     @media (min-width: $laptop) {
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     @media (min-width: 1350px) {
