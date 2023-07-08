@@ -24,26 +24,26 @@
                                 <li class="phones__item"><a href="">+38065464466</a></li>
                             </ul>
                         </div>
-                        <form action="POST" class="form">
+                        <form action="" method="post" class="form">
                             <h2 class="form__title title-second">Обратный звонок</h2>
                             <label class="form__input-label">
                                 <h3 class="form__input-title">Ваше имя и фамилия</h3>
-                                <input class="form__input" type="text" name="name" placeholder="ФИО">
+                                <input class="form__input" type="text" name="name" placeholder="ФИО" required>
                             </label>
                             <label class="form__input-label _half-row">
                                 <h3 class="form__input-title">Электронная почта</h3>
-                                <input class="form__input" type="text" name="email" placeholder="mail@mail.com">
+                                <input class="form__input" type="email" name="email" placeholder="mail@mail.com"
+                                    required>
                             </label>
                             <label class="form__input-label _half-row">
                                 <h3 class="form__input-title">Контактный телефон</h3>
                                 <input class="form__input" id="phone" type="tel" name="phone"
-                                    value="+(38_)-__-___-__-__" autocomplete="off"
-                                    pattern="+\(38\d\)-\d{2}-\d{3}-\d{2}-\d{2}$/">
+                                    placeholder="+38 (___) ___-____" required>
                             </label>
                             <label class="form__input-label">
                                 <h3 class="form__input-title">Комментарий</h3>
                                 <textarea class="form__textarea" name="comment" cols="20" rows="10"
-                                    placeholder="Адрес доставки и пожелания..."></textarea>
+                                    placeholder="Адрес доставки и пожелания..." required></textarea>
                             </label>
                             <div class="form__footer">
                                 <button class="form__btn button" type="submit">Отправить</button>
