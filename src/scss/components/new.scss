@@ -16,7 +16,7 @@
 
 .new__slider {
     @media (min-width: $laptop) {
-        max-width: 95%;
+        max-width: calc(95% + 1px);
     }
 }
 

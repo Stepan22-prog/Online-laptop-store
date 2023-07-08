@@ -20,12 +20,20 @@
 
     @media (min-width: $mobileB) {
         gap: 8px;
+        grid-template-columns: 280px 1fr;
+    }
+
+    @media (min-width: $tablet) {
         grid-template-columns: 1fr 1fr;
     }
 }
 
+//========================================================================================================================================================
+//select
 .select {
+    position: relative;
     margin-bottom: 10px;
+    min-height: 34px;
 
     @media (min-width: $tablet) {
         margin-bottom: 16px;
@@ -33,9 +41,12 @@
 }
 
 .select__body {
+    position: absolute;
+    width: 100%;
     border: 2px solid $blueColor;
     border-radius: 8px;
     min-width: 280px;
+    background: $whiteColor;
 }
 
 .select_open .select__title::after {
@@ -76,17 +87,18 @@
 
 .calalog__products {
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 10px;
     margin-bottom: 15px;
 
     @media (min-width: $laptop) {
         gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-items: start;
     }
 
     @media (min-width: 1350px) {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }

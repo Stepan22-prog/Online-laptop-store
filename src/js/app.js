@@ -100,9 +100,6 @@ if (document.querySelector('.new__slider')) {
         slidesPerGroup: 3,
         slidesPerView: 3
       },
-      1024: {
-
-      },
       1200: {
         slidesPerGroup: 4,
         slidesPerView: 4,
