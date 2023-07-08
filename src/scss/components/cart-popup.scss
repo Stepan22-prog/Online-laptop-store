@@ -29,6 +29,7 @@
     position: absolute;
     top: 60px;
     right: 0;
+    background: transparent;
 
     @media (min-width: $laptop) {
         top: 35px;
@@ -44,6 +45,10 @@
             color: $yellowColor;
             transition: 0.2s;
         }
+    }
+
+    @media (min-width: $laptop) {
+        max-width: 535px;
     }
 }
 
