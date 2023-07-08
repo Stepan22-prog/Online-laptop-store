@@ -68,8 +68,14 @@ import PopupManager from './modules/PopupManager';
 new PopupManager();
 //validation
 window.onload = function () {
+  console.log(document.getElementById('phone'));
   MaskedInput({
     elm: document.getElementById('phone'), // select only by id
+    format: '+(38_)-__-___-__-__',
+    separator: '+(38)-'
+  });
+  MaskedInput({
+    elm: document.getElementById('phone_call'), // select only by id
     format: '+(38_)-__-___-__-__',
     separator: '+(38)-'
   });
