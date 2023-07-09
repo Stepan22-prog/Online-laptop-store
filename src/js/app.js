@@ -85,7 +85,7 @@ if (document.querySelector('.new__slider')) {
     grabCursor: true,
     breakpoints: {
       // when window width is >= 500px
-      500: {
+      550: {
         slidesPerGroup: 2,
         slidesPerView: 2
       },
