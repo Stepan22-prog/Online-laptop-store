@@ -27,6 +27,10 @@
         &.footer-column_last {
             order: 4;
         }
+
+        &.footer-column_align-center {
+            align-self: center;
+        }
     }
 
     @media (min-width: $laptop) {
@@ -39,10 +43,10 @@
 }
 
 .footer__logo {
-    //test
-    width: 100px;
-    height: 50px;
+    width: 150px;
     margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .footer-column__title {

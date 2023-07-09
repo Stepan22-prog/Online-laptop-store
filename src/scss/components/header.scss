@@ -5,8 +5,12 @@
   left: 0;
   width: 100%;
   z-index: 2;
-  background: $whiteColor;
+  background: #76BB9D;
   box-shadow: 0 2px 2px rgba(0, 0, 0, .22);
+
+  @media (min-width: $laptop) {
+    background: $whiteColor;
+  }
 }
 
 //========================================================================================================================================================
@@ -15,17 +19,16 @@
   @media (min-width: $laptop) {
     max-width: $containerWidth + px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 10px 20px;
     display: grid;
     grid-template-columns: max-content 1fr;
-    gap: 10px;
+    gap: 80px;
     align-items: center;
     justify-content: space-between;
   }
 
-  @media (min-width: $laptop) {
-    padding: 20px;
-    gap: 80px;
+  @media (min-width: 1460px) {
+    padding: 10px 0px;
   }
 }
 
@@ -406,7 +409,6 @@ html.menu-open .header-menu-icon {
   color: $whiteColor;
   overflow-y: scroll;
   transition: $standartTrans;
-  border-top: 1px solid $whiteColor;
 
   a {
     width: 100%;
