@@ -14,7 +14,7 @@ const html = () => {
     .pipe(plugins.handleError('HTML'))
     .pipe(fileInclude())
     .pipe(plugins.replace(/@img\//g, 'images/'))
-    .pipe(plugins.if(isBuild, webpHtml()))
+    //.pipe(plugins.if(isBuild, webpHtml()))
     .pipe(
       htmlMin({
         useShortDoctype: true,
