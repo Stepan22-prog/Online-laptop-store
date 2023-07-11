@@ -2,7 +2,7 @@
 <mask id="mask0_477_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
 <rect x="0.937622" y="0.747658" width="24" height="24" fill="#D9D9D9"/>
 </mask>
-<g mask="url(#mask0_477_7)">
+<g>
 <path d="M10.4876 18.7477L4.7876 13.0477L6.2126 11.6227L10.4876 15.8977L19.6626 6.72266L21.0876 8.14766L10.4876 18.7477Z" fill="white"/>
 </g>
 </svg>
