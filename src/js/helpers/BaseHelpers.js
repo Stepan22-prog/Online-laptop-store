@@ -24,7 +24,7 @@ class BaseHelpers {
       const className = support ? 'webp' : 'no-webp';
       this.html.classList.add(className);
 
-      console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
+      //console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
     });
   }
 

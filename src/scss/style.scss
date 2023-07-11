@@ -8,13 +8,6 @@
 /** Подключение переменных */
 @import 'config/vars';
 
-/**
-* Подключение sass function и mixins и extends стилей
-*/
-//@import 'config/functions';
-//@import 'config/mixins';
-//@import 'config/patternSelectors';
-
 /** Обнуление */
 @import 'config/reset';
 
@@ -22,13 +15,11 @@
 * Библиотеки
 * раскомментировать для использования
 */
-// @import 'libs/aos';
 @import 'libs/swiper';
 
 /**
 * Подключение custom scrollbar для всего сайта
 */
-//@import 'config/scrollbar';
 @import 'config/nouislider.scss';
 
 /**
@@ -58,6 +49,4 @@
 @import 'components/product';
 @import 'components/gallery-popup';
 @import 'components/reviews';
-//@import 'components/tabs';
-//@import 'components/accordion';
 @import 'components/footer';

@@ -15,7 +15,7 @@ const createSvgSprite = () => {
             sprite: '../icons/icons.svg',
 
             /** Создавать страницу с перечнем иконок */
-            example: true,
+            example: false,
           },
         },
       })

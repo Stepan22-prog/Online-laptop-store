@@ -6,23 +6,19 @@
 
  * Если мы хотим добавить модуль следует его раскомментировать
  */
-// import MousePRLX from './libs/parallaxMouse'
-// import AOS from 'aos'
-import Swiper, { Autoplay, Navigation, Pagination, Thumbs, Zoom } from 'swiper';
-
 import BaseHelpers from './helpers/BaseHelpers.js';
-//import BurgerMenu from './modules/BurgerMenu';
-//import Tabs from './modules/Tabs';
-import Accordion from './modules/Accordion.js';
 
 BaseHelpers.checkWebpSupport();
 
-BaseHelpers.addTouchClass();
+//мой код
+//spoilers
+import * as modules from './modules/modules';
+modules.spollers();
 
-BaseHelpers.addLoadedClass();
+//menu
+modules.menuInit();
 
-BaseHelpers.headerFixed();
-
+//popup
 /**
  * Открытие/закрытие модальных окон
  * Чтобы модальное окно открывалось и закрывалось
@@ -33,39 +29,9 @@ BaseHelpers.headerFixed();
  * На кнопку для закрытия окна добавь класс '.button-close'
  * */
 
-/**
- *  Модуль для работы с меню (Бургер)
- * */
-//new BurgerMenu().init();
-
-/**
- *  Библиотека для анимаций
- *  документация: https://michalsnik.github.io/aos
- * */
-// AOS.init();
-
-/**
- * Параллакс мышей
- * */
-// new MousePRLX();
-
-//new Tabs('tabs-example', {});
-
-new Accordion('.accordion', {
-  shouldOpenAll: false, // true
-  defaultOpen: [], // [0,1]
-  collapsedClass: 'open',
-});
-
-//мой код
-//spoilers
-import * as modules from './modules/modules';
-modules.spollers();
-//menu
-modules.menuInit();
-//popup
 import PopupManager from './modules/PopupManager';
 new PopupManager();
+
 //validation
 import './libs/jquery.maskedinput.min';
 jQuery(function ($) {
@@ -73,7 +39,9 @@ jQuery(function ($) {
   $("#phone__call").mask("+38 (999) 999-9999");
   $("#phone__cart").mask("+38 (999) 999-9999");
 });
+
 //sliders
+import Swiper, { Autoplay, Navigation, Pagination, Thumbs, Zoom } from 'swiper';
 if (document.querySelector('.new__slider')) {
   const swiper = new Swiper('.new__slider', {
     // configure Swiper to use modules
@@ -163,6 +131,7 @@ if (document.querySelector('.gallery__slider')) {
     galleryPopup.slideTo(swiper.activeIndex, 0)
   }))
 }
+
 //scroll
 const btn = document.querySelector('.to-top');
 document.addEventListener("scroll", () => {
