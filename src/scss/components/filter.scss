@@ -145,9 +145,7 @@
 .filter-group {}
 
 .filter-group__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     width: 100%;
     font-size: 20px;
     font-weight: 500;
@@ -159,6 +157,10 @@
     &::after {
         content: '';
         display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 10px;
         width: 15px;
         height: 15px;
         background-image: url('../img/icons/icons.svg#arrow-right');
@@ -166,7 +168,7 @@
     }
 
     &._spoller-active::after {
-        transform: rotate(90deg);
+        transform: translate(0, -50%) rotate(90deg);
         transition: $standartTrans;
     }
 
