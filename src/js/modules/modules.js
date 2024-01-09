@@ -1,9 +1,6 @@
-// Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 export function isWebp() {
-    // Проверка поддержки webp
     function testWebP(callback) {
         let webP = new Image();
         webP.onload = webP.onerror = function () {
@@ -11,20 +8,19 @@ export function isWebp() {
         };
         webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
     }
-    // Добавление класса _webp или _no-webp для HTML
     testWebP(function (support) {
         let className = support === true ? 'webp' : 'no-webp';
         document.documentElement.classList.add(className);
     });
 }
-/* Проверка мобильного браузера */
+
 export let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
-/* Добавление класса touch для HTML если браузер мобильный */
+
 export function addTouchClass() {
-    // Добавление класса _touch для HTML если браузер мобильный
+
     if (isMobile.any()) document.documentElement.classList.add('touch');
 }
-// Добавление loaded для HTML после полной загрузки страницы
+
 export function addLoadedClass() {
     window.addEventListener("load", function () {
         setTimeout(function () {
@@ -32,16 +28,16 @@ export function addLoadedClass() {
         }, 0);
     });
 }
-// Получение хеша в адресе сайта
+
 export function getHash() {
     if (location.hash) { return location.hash.replace('#', ''); }
 }
-// Указание хеша в адресе сайта
+
 export function setHash(hash) {
     hash = hash ? `#${hash}` : window.location.href.split('#')[0];
     history.pushState('', '', hash);
 }
-// Учет плавающей панели на мобильных устройствах при 100vh
+
 export function fullVHfix() {
     const fullScreens = document.querySelectorAll('[data-fullscreen]');
     if (fullScreens.length && isMobile.any()) {
@@ -53,7 +49,7 @@ export function fullVHfix() {
         fixHeight();
     }
 }
-// Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
+
 export let _slideUp = (target, duration = 500, showmore = 0) => {
     if (!target.classList.contains('_slide')) {
         target.classList.add('_slide');
@@ -78,7 +74,7 @@ export let _slideUp = (target, duration = 500, showmore = 0) => {
             target.style.removeProperty('transition-duration');
             target.style.removeProperty('transition-property');
             target.classList.remove('_slide');
-            // Создаем событие 
+
             document.dispatchEvent(new CustomEvent("slideUpDone", {
                 detail: {
                     target: target
@@ -113,7 +109,7 @@ export let _slideDown = (target, duration = 500, showmore = 0) => {
             target.style.removeProperty('transition-duration');
             target.style.removeProperty('transition-property');
             target.classList.remove('_slide');
-            // Создаем событие 
+
             document.dispatchEvent(new CustomEvent("slideDownDone", {
                 detail: {
                     target: target
@@ -129,7 +125,7 @@ export let _slideToggle = (target, duration = 500) => {
         return _slideUp(target, duration);
     }
 }
-// Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
+
 export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 500) => {
     if (document.documentElement.classList.contains('lock')) {
@@ -173,34 +169,30 @@ export let bodyLock = (delay = 500) => {
         }, delay);
     }
 }
-// Модуль работы со спойлерами =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-spojlery.html
-Сниппет (HTML): spoiler
-*/
+
 export function spollers() {
     const spollersArray = document.querySelectorAll('[data-spollers]');
     if (spollersArray.length > 0) {
-        // Получение обычных слойлеров
+
         const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
             return !item.dataset.spollers.split(",")[0];
         });
-        // Инициализация обычных слойлеров
+
         if (spollersRegular.length) {
             initSpollers(spollersRegular);
         }
-        // Получение слойлеров с медиа запросами
+
         let mdQueriesArray = dataMediaQueries(spollersArray, "spollers");
         if (mdQueriesArray && mdQueriesArray.length) {
             mdQueriesArray.forEach(mdQueriesItem => {
-                // Событие
+
                 mdQueriesItem.matchMedia.addEventListener("change", function () {
                     initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                 });
                 initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
             });
         }
-        // Инициализация
+
         function initSpollers(spollersArray, matchMedia = false) {
             spollersArray.forEach(spollersBlock => {
                 spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
@@ -226,7 +218,7 @@ export function spollers() {
                 }
             });
         }
-        // Работа с контентом
+
         function initSpollerBody(spollersBlock, hideSpollerBody = true) {
             let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
             if (spollerTitles.length) {
@@ -297,11 +289,7 @@ export function dropDown() {
         window.addEventListener('click', outsideClickListener);
     });
 }
-// Модуь работы с табами =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-taby.html
-Сниппет (HTML): tabs
-*/
+
 export function tabs() {
     const tabs = document.querySelectorAll('[data-tabs]');
     let tabsActiveHash = [];
@@ -318,11 +306,9 @@ export function tabs() {
             initTabs(tabsBlock);
         });
 
-        // Получение слойлеров с медиа запросами
         let mdQueriesArray = dataMediaQueries(tabs, "tabs");
         if (mdQueriesArray && mdQueriesArray.length) {
             mdQueriesArray.forEach(mdQueriesItem => {
-                // Событие
                 mdQueriesItem.matchMedia.addEventListener("change", function () {
                     setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                 });
@@ -330,7 +316,7 @@ export function tabs() {
             });
         }
     }
-    // Установка позиций заголовков
+
     function setTitlePosition(tabsMediaArray, matchMedia) {
         tabsMediaArray.forEach(tabsMediaItem => {
             tabsMediaItem = tabsMediaItem.item;
@@ -352,7 +338,7 @@ export function tabs() {
             });
         });
     }
-    // Работа с контентом
+
     function initTabs(tabsBlock) {
         let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*');
         let tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*');
@@ -427,11 +413,7 @@ export function tabs() {
         }
     }
 }
-// Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/menu-burger.html
-Сниппет (HTML): menu
-*/
+
 export function menuInit() {
     if (document.querySelector(".js-icon-menu")) {
         document.addEventListener("click", function (e) {
@@ -450,32 +432,26 @@ export function menuClose() {
     bodyUnlock();
     document.documentElement.classList.remove("menu-open");
 }
-// Модуль "показать еще" =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
-Сниппет (HTML): showmore
-*/
+
 export function showMore() {
     window.addEventListener("load", function (e) {
         const showMoreBlocks = document.querySelectorAll('[data-showmore]');
         let showMoreBlocksRegular;
         let mdQueriesArray;
         if (showMoreBlocks.length) {
-            // Получение обычных объектов
+
             showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
                 return !item.dataset.showmoreMedia;
             });
-            // Инициализация обычных объектов
+
             showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
 
             document.addEventListener("click", showMoreActions);
             window.addEventListener("resize", showMoreActions);
 
-            // Получение объектов с медиа запросами
             mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
             if (mdQueriesArray && mdQueriesArray.length) {
                 mdQueriesArray.forEach(mdQueriesItem => {
-                    // Событие
                     mdQueriesItem.matchMedia.addEventListener("change", function () {
                         initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                     });
@@ -565,10 +541,7 @@ export function showMore() {
         }
     });
 }
-//================================================================================================================================================================================================================================================================================================================
-// Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
-//================================================================================================================================================================================================================================================================================================================
-// FLS (Full Logging System)
+
 export function FLS(message) {
     setTimeout(() => {
         if (window.FLS) {
@@ -576,40 +549,39 @@ export function FLS(message) {
         }
     }, 0);
 }
-// Получить цифры из строки
+
 export function getDigFromString(item) {
     return parseInt(item.replace(/[^\d]/g, ''))
 }
-// Форматирование цифр типа 100 000 000
+
 export function getDigFormat(item) {
     return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
 }
-// Убрать класс из всех элементов массива
+
 export function removeClasses(array, className) {
     for (var i = 0; i < array.length; i++) {
         array[i].classList.remove(className);
     }
 }
-// Уникализация массива
+
 export function uniqArray(array) {
     return array.filter(function (item, index, self) {
         return self.indexOf(item) === index;
     });
 }
-// Функция получения индекса внутри родителя
+
 export function indexInParent(parent, element) {
     const array = Array.prototype.slice.call(parent.children);
     return Array.prototype.indexOf.call(array, element);
 };
-// Обработа медиа запросов из атрибутов 
+ 
 export function dataMediaQueries(array, dataSetValue) {
-    // Получение объектов с медиа запросами
     const media = Array.from(array).filter(function (item, index, self) {
         if (item.dataset[dataSetValue]) {
             return item.dataset[dataSetValue].split(",")[0];
         }
     });
-    // Инициализация объектов с медиа запросами
+
     if (media.length) {
         const breakpointsArray = [];
         media.forEach(item => {
@@ -621,7 +593,7 @@ export function dataMediaQueries(array, dataSetValue) {
             breakpoint.item = item;
             breakpointsArray.push(breakpoint);
         });
-        // Получаем уникальные брейкпоинты
+
         let mdQueries = breakpointsArray.map(function (item) {
             return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
         });
@@ -629,13 +601,13 @@ export function dataMediaQueries(array, dataSetValue) {
         const mdQueriesArray = [];
 
         if (mdQueries.length) {
-            // Работаем с каждым брейкпоинтом
+
             mdQueries.forEach(breakpoint => {
                 const paramsArray = breakpoint.split(",");
                 const mediaBreakpoint = paramsArray[1];
                 const mediaType = paramsArray[2];
                 const matchMedia = window.matchMedia(paramsArray[0]);
-                // Объекты с нужными условиями
+
                 const itemsArray = breakpointsArray.filter(function (item) {
                     if (item.value === mediaBreakpoint && item.type === mediaType) {
                         return true;
@@ -650,4 +622,3 @@ export function dataMediaQueries(array, dataSetValue) {
         }
     }
 }
-//================================================================================================================================================================================================================================================================================================================
