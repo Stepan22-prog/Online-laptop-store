@@ -24,8 +24,8 @@ jQuery(function ($) {
 
 //sliders
 import Swiper, { Autoplay, Navigation, Pagination, Thumbs, Zoom } from 'swiper';
-if (document.querySelector('.new__slider')) {
-  const swiper = new Swiper('.new__slider', {
+if (document.querySelector('.new-slider')) {
+  const swiper = new Swiper('.new-slider', {
     // configure Swiper to use modules
     modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 1,
