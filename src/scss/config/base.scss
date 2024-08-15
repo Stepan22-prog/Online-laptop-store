@@ -10,17 +10,17 @@
 * Например header__container, main__container и т.д.
 */
 [class*='__container'] {
-  max-width: ($containerWidth + $mainOffset * 2) + px;
+  max-width: ($containerWidth + $mainOffset * 2);
   margin: 0 auto;
-  padding: 0 ($mainOffset) + px;
+  padding: 0 ($mainOffset);
 
   @media (min-width: $mobileB) {
-    padding: 0 15px;
+    padding: 0 $mainOffsetMobileB;
   }
 
-  @media (min-width: $laptop) {
-    padding: 0 15px;
-  }
+  // @media (min-width: $laptop) {
+  //   padding: 0 15px;
+  // }
 }
 
 // Стили отзывчивых картинок ============================================
@@ -36,7 +36,6 @@ img {
   flex-direction: column;
   min-height: 100%;
   min-width: 360px;
-  /** Поменять на clip - если используется в проекте position: sticky */
   overflow-x: hidden;
 }
 

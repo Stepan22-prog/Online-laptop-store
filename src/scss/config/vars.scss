@@ -1,31 +1,28 @@
-//$maxWidth: 1440; // максимальная ширина страницы
-//$minWidth: 360; // минимальная ширина телефона
-//$maxWidthContainer: 1; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1440; // ширина контейнера из макета
+//adaptive
+$mobileS: 360px;
+$mobileB: 425px;
+$tablet: 768px;
+$laptop: 1024px;
 
-$mainOffset: 10; // отступы безопасности для контейнера
-$mainFont: 'Inter'; // !указать здесь основное семейство шрифта
-$mainWeight: 400; // !указать здесь основное начертание шрифта
+$containerWidth: 1440px;
 
-//$headerHeight: 100;
-//$footerHeight: 100;
-
-//$mainRadius: rem(10);
+$mainOffset: 10px; // container safety paddings
+$mainOffsetMobileB: 15px;
+$mainFont: 'Inter';
+$mainWeight: 400;
 
 $whiteColor: #fff;
 $blackColor: #000;
 $yellowColor: #FF9000;
 $blueColor: #2C5E98;
 $greenColor: #76BB9D;
-//$greenColor: #AABE4E;
 $greyColor: #8D949B;
-//$greyColor: #ADB5BD;
 $redColor: #BC4749;
 
-$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
-$fontColor: $blackColor; // Цвет шрифта по умолчанию
-$fontSize: 16; // Размер шрифта по умолчанию
-$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+$fontFamily: $mainFont, sans-serif;
+$fontColor: $blackColor;
+$fontSize: 16;
+$fontWeight: $mainWeight;
 
 $standartTrans: all 0.4s ease 0ms;
 
@@ -36,9 +33,3 @@ $lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
 
 $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
   0 0 15px 0 rgba(#000, 10%);
-
-//adaptive
-$mobileS: 360px;
-$mobileB: 425px;
-$tablet: 768px;
-$laptop: 1024px;

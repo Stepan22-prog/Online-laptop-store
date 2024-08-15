@@ -13,7 +13,7 @@
 //Header top
 .header__top {
   @media (min-width: $laptop) {
-    max-width: $containerWidth + px;
+    max-width: $containerWidth;
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
@@ -22,13 +22,9 @@
     align-items: center;
     justify-content: space-between;
   }
-
-  @media (min-width: 1450px) {
-    padding: 0px;
-  }
 }
 
-.header__logo {
+.header-logo {
   max-height: 50px;
   display: flex;
   justify-content: center;
@@ -82,13 +78,13 @@
   width: 30px;
   height: 15px;
   position: relative;
-  left: -15px;
   background: transparent;
 
   span,
   &::before,
   &::after {
     position: absolute;
+    left: 0;
     width: 30px;
     height: 2px;
     background: $whiteColor;
@@ -108,12 +104,13 @@
   }
 
   &::after {
-    top: 0;
+    bottom: 0;
     transition: $standartTrans;
   }
 
   &::before {
-    bottom: 0;
+    top: 0;
+    height: 2.5px;
     transition: $standartTrans;
   }
 
@@ -128,14 +125,12 @@ html.menu-open .header-menu-icon {
   }
 
   &::after {
-    top: 7px;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateX(-9px);
     transition: $standartTrans;
   }
 
   &::before {
-    bottom: 5px;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateX(-9px);
     transition: $standartTrans;
   }
 }
@@ -156,17 +151,12 @@ html.menu-open .header-menu-icon {
   border-radius: 5px 0px 0px 5px;
   border: 1px solid $whiteColor;
   background: $whiteColor;
-  color: $whiteColor;
+  color: $blackColor;
   outline: none;
 
   &::placeholder {
     color: $greyColor;
     font-size: 14px;
-  }
-
-  @media (min-width: $laptop) {
-    color: $blackColor;
-    border: 1px solid $whiteColor;
   }
 }
 
@@ -176,15 +166,14 @@ html.menu-open .header-menu-icon {
   justify-content: center;
   width: 35px;
   border-radius: 0px 5px 5px 0px;
-  transform: translate(-1px, 0);
 
   span {
     display: none;
+    font-size: 14px;
+    color: $whiteColor;
 
     @media (min-width: $tablet) {
       display: block;
-      font-size: 14px;
-      color: $whiteColor;
     }
   }
 
@@ -217,7 +206,6 @@ html.menu-open .header-menu-icon {
 
 //Header contacts
 .header-contacts {
-  max-width: 30px;
   margin-right: 8px;
   position: relative;
 
@@ -413,7 +401,7 @@ html.menu-open .header-menu-icon {
 
   @media (min-width: $laptop) {
     height: auto;
-    overflow-y: visible;
+    overflow-y: auto;
   }
 }
 
