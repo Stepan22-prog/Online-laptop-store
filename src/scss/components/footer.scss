@@ -11,12 +11,15 @@
 
     @media (min-width: $tablet) {
         display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: $laptop) {
+        max-width: 85%;
     }
 }
 
 .footer-column {
-
-    //margin-right: 150px;
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -32,17 +35,9 @@
             align-self: center;
         }
     }
-
-    @media (min-width: $laptop) {
-        margin-right: 100px;
-    }
-
-    @media (min-width: 1200px) {
-        margin-right: 150px;
-    }
 }
 
-.footer__logo {
+.footer-logo {
     width: 150px;
     margin: 0 auto;
     border-radius: 5px;
@@ -50,8 +45,16 @@
 }
 
 .footer-column__title {
+    display: flex;
+    align-items: center;
     color: $greenColor;
-    margin-bottom: 8px;
+
+    svg {
+        fill: $greenColor;
+        @media (min-width: $tablet) {
+            display: none;
+        }
+    }
 }
 
 .footer-column__list {
