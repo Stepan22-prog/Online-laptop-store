@@ -102,9 +102,7 @@
     margin-bottom: 15px;
 }
 
-.product__price {}
-
-.product__old-price {
+.product-price__old {
     font-size: 14px;
     color: $redColor;
     text-decoration: line-through solid $redColor;
@@ -120,7 +118,7 @@
     }
 }
 
-.product__actual-price {
+.product-price__actual {
     margin-bottom: 0;
     font-size: 20px;
     font-weight: 500;
