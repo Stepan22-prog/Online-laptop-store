@@ -56,9 +56,9 @@
     align-items: center;
 }
 
-.product-card__price {}
+.product-card-price {}
 
-.product-card__old-price {
+.product-card-price__old {
     font-size: 14px;
     color: $redColor;
     text-decoration: line-through solid $redColor;
@@ -70,7 +70,7 @@
     }
 }
 
-.product-card__actual-price {
+.product-card-price__actual {
     font-size: 18px;
     margin-bottom: 0;
 
