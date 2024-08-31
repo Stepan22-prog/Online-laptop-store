@@ -68,7 +68,7 @@
     }
 }
 
-.filter-applied__item {
+.filter-applied-item {
     &:not(:last-child) {
         margin-bottom: 16px;
     }
@@ -122,7 +122,7 @@
 
 .filter__body {}
 
-.filter__reset {
+.filter-reset {
     font-size: 16px;
     color: $whiteColor;
     text-decoration: underline;
