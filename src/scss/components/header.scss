@@ -401,7 +401,7 @@ html.menu-open .header-menu-icon {
 
   @media (min-width: $laptop) {
     height: auto;
-    overflow-y: auto;
+    overflow-y: visible;
   }
 }
 
