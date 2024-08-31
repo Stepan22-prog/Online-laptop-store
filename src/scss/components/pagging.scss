@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.pagging__arrow {
+.pagging-arrow {
     display: flex;
     align-items: center;
 
@@ -19,8 +19,6 @@
         }
     }
 }
-
-.pagging__arrow_left {}
 
 .pagging__list {
     display: flex;
@@ -60,6 +58,6 @@
 
 .pagging__item_active {}
 
-.pagging__arrow_right {
+.pagging-arrow_right {
     transform: rotate(180deg);
 }
