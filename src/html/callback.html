@@ -2,7 +2,7 @@
     <div class="popup__content">
         <div class="popup__container">
             <div class="popup__header">
-                <h2 class="popup__title title-first">Обратный звонок</h2>
+                <h2 class="popup__title title-first">Зворотній зв'язок</h2>
                 <button class="popup__close button-close">
                     <svg width="35" height="35">
                         <use xlink:href="img/icons/icons.svg#close"></use>
@@ -10,22 +10,21 @@
                 </button>
             </div>
             <form action="" method="post" class="form">
-                <label class="form__input-label _half-row">
-                    <h3 class="form__input-title">Ваше имя и фамилия</h3>
-                    <input class="form__input" type="text" name="name" placeholder="ФИО" required>
-                </label>
-                <label class="form__input-label _half-row">
-                    <h3 class="form__input-title">Контактный телефон</h3>
-                    <input class="form__input" id="phone__call" type="tel" name="phone" placeholder="+38 (___) ___-____"
+                <div class="form__block _half-row">
+                    <label for="name" class="form__label">Ваше ім'я та прізвище</label>
+                    <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
+                </div>
+                <div class="form__block _half-row">
+                    <label for="phone" class="form__label">Телефон</label>
+                    <input id="phone" class="form__input" id="phone__cart" type="tel" name="phone" placeholder="+38 (___) ___-____"
                         required>
-                </label>
-                <label class="form__input-label">
-                    <h3 class="form__input-title">Комментарий</h3>
-                    <textarea class="form__textarea" name="comment" cols="20" rows="10"
-                        placeholder="Адрес доставки и пожелания..." required></textarea>
-                </label>
+                </div>
+                <div class="form__block">
+                    <label for="comment" class="form__label">Коментар до замовлення</label>
+                    <textarea id="comment" class="form__textarea" name="comment" cols="20" rows="10" required></textarea>
+                </div>
                 <div class="form__footer">
-                    <button class="form__btn button" type="submit">Перезвонить мне</button>
+                    <button class="form__btn button" type="submit">Перетелефонувати мені</button>
                 </div>
             </form>
         </div>
