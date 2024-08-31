@@ -75,7 +75,8 @@ h3 {
     }
 }
 
-.form__input-title {
+.form__label {
+    display: inline-block;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 8px;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html', {
-'title': 'Отзывы'
+'title': 'Відгуки'
 })
 
 <body>
@@ -10,17 +10,17 @@
         <main class="page reviews">
             <div class="page__container">
                 <ul class="breadcrumbs">
-                    <li class="breadrrumbs__item"><a href="">Главная</a></li>
-                    <li class="breadrrumbs__item"><a href="">Отзывы</a></li>
+                    <li class="breadcrumbs__item"><a href="/">Головна</a></li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Відгуки</span></li>
                 </ul>
-                <h1 class="title-first">Отзывы</h1>
-                <form action="" method="post" class="reviews__form form">
-                    <label class="form__input-label _half-row">
-                        <h3 class="form__input-title">Ваше имя и фамилия</h3>
-                        <input class="form__input" type="text" name="name" placeholder="ФИО" required>
-                    </label>
-                    <label class="form__input-label _half-row">
-                        <h3 class="form__input-title">Оценка</h3>
+                <h1 class="reviews__title title-first">Відгуки</h1>
+                <form action="" method="post" class="reviews-form form">
+                    <div class="form__block _half-row">
+                        <label for="name" class="form__label">Ваше ім'я та прізвище</label>
+                        <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
+                    </div>
+                    <div class="form__block _half-row">
+                        <label class="form__label">Оцінки</label>
                         <div class="rating">
                             <div class="rating__body">
                                 <div class="rating__items">
@@ -39,14 +39,13 @@
                             </div>
                             <span class="rating__value">4</span>
                         </div>
-                    </label>
-                    <label class="form__input-label _half-row">
-                        <h3 class="form__input-title">Комментарий</h3>
-                        <textarea class="form__textarea" name="comment" cols="20" rows="10"
-                            placeholder="Отзыв..."></textarea>
-                    </label>
+                    </div>
+                    <div class="form__block _half-row">
+                        <label for="review" class="form__label">Відгук</label>
+                        <textarea id="review" class="form__textarea" name="review" cols="20" rows="10" required></textarea>
+                    </div>
                     <div class="form__footer">
-                        <button class="form__btn button" type="submit">Отправить</button>
+                        <button class="form__btn button" type="submit">Відправити</button>
                     </div>
                 </form>
                 <ul class="reviews__list">
@@ -54,7 +53,7 @@
                         <div class="reviews-item__header">
                             <h2 class="reviews-item__title">Стаднюк Степан Романович</h2>
                             <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
-                            <div class="reviews-item__rating user-rating">
+                            <div class="user-rating">
                                 <div class="user-rating__list">
                                     <span class="user-rating__item _active">★</span>
                                     <span class="user-rating__item _active">★</span>
@@ -65,14 +64,13 @@
                                 <div class="user-rating__value">4</div>
                             </div>
                         </div>
-                        <p class="review-item__text">Мне все понравилось. рпыдшвапрд швыарпдвыапр дварпавпрд вшап
-                            рдвгапршгвапрв ыапрв ывпа вавпвпаоавпор р пр аоаро во п впар авро п оп аао</p>
+                        <p class="review-item__text">Замовляв ноутбук для роботи, і залишився дуже задоволений! Менеджери магазину швидко допомогли вибрати оптимальний варіант, який відповідав моїм вимогам і бюджету. Доставка була оперативною, а ноутбук прийшов добре запакованим і в ідеальному стані. Дуже задоволений покупкою, обов’язково буду звертатися ще!</p>
                     </li>
                     <li class="reviews-item">
                         <div class="reviews-item__header">
-                            <h2 class="reviews-item__title">Имя фамилия</h2>
+                            <h2 class="reviews-item__title">Користувач 1</h2>
                             <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
-                            <div class="reviews-item__rating user-rating">
+                            <div class="user-rating">
                                 <div class="user-rating__list">
                                     <span class="user-rating__item _active">★</span>
                                     <span class="user-rating__item _active">★</span>
@@ -83,14 +81,13 @@
                                 <div class="user-rating__value">5</div>
                             </div>
                         </div>
-                        <p class="review-item__text">Мне все понравилось. рпыдшвапрд швыарпдвыапр дварпавпрд вшап
-                            рдвгапршгвапрв ыапрв ывпа вавпвпаоавпор р пр аоаро во п впар авро п оп аао</p>
+                        <p class="review-item__text">Придбав монітор і жорсткий диск для апгрейду свого ПК. Магазин має великий вибір, і консультанти дуже добре орієнтуються в асортименті. Все прийшло швидко, у надійній упаковці, товар відповідає опису на сайті. Працює відмінно! Дякую за гарний сервіс і доступні ціни.</p>
                     </li>
                     <li class="reviews-item">
                         <div class="reviews-item__header">
-                            <h2 class="reviews-item__title">Имя фамилия</h2>
+                            <h2 class="reviews-item__title">Користувач 2</h2>
                             <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
-                            <div class="reviews-item__rating user-rating">
+                            <div class="user-rating">
                                 <div class="user-rating__list">
                                     <span class="user-rating__item _active">★</span>
                                     <span class="user-rating__item _active">★</span>
@@ -101,8 +98,7 @@
                                 <div class="user-rating__value">3</div>
                             </div>
                         </div>
-                        <p class="review-item__text">Мне все понравилось. рпыдшвапрд швыарпдвыапр дварпавпрд вшап
-                            рдвгапршгвапрв ыапрв ывпа вавпвпаоавпор р пр аоаро во п впар авро п оп аао</p>
+                        <p class="review-item__text">Купував у цьому магазині вже кілька разів, завжди задоволений сервісом. Цього разу брав ігрову мишу і клавіатуру – якість на висоті, а ціна приємно здивувала. Окремо хочу відзначити швидку консультацію та можливість самовивозу. Рекомендую всім, хто шукає якісну комп’ютерну техніку!</p>
                     </li>
                 </ul>
             </div>
