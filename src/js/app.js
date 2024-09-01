@@ -26,7 +26,6 @@ jQuery(function ($) {
 import Swiper, { Autoplay, Navigation, Pagination, Thumbs, Zoom } from 'swiper';
 if (document.querySelector('.new-slider')) {
   const swiper = new Swiper('.new-slider', {
-    // configure Swiper to use modules
     modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -34,12 +33,10 @@ if (document.querySelector('.new-slider')) {
     speed: 800,
     grabCursor: true,
     breakpoints: {
-      // when window width is >= 500px
       550: {
         slidesPerGroup: 2,
         slidesPerView: 2
       },
-      // when window width is >= 640px
       768: {
         slidesPerGroup: 3,
         slidesPerView: 3
@@ -67,7 +64,6 @@ if (document.querySelector('.new-slider')) {
 if (document.querySelector('.gallery__slider')) {
   const galleryOpen = document.querySelectorAll('.gallery__slide');
   const swiperThumb = new Swiper('.thumbs__slider', {
-    // configure Swiper to use modules
     modules: [Navigation],
     slidesPerView: 3,
     slidesPerGroup: 1,
@@ -82,7 +78,6 @@ if (document.querySelector('.gallery__slider')) {
     },
   });
   const swiper = new Swiper('.gallery__slider', {
-    // configure Swiper to use modules
     modules: [Thumbs],
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -96,7 +91,6 @@ if (document.querySelector('.gallery__slider')) {
     },
   });
   const galleryPopup = new Swiper('.gallery-popup__slider', {
-    // configure Swiper to use modules
     modules: [Navigation, Zoom],
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -177,7 +171,7 @@ if (document.getElementById('range')) {
 //tabs
 modules.tabs();
 
-//reviews
+//rating
 const ratingItems = document.querySelectorAll('.rating__item');
 const ratingValue = document.querySelector('.rating__value');
 ratingItems.forEach(item => {

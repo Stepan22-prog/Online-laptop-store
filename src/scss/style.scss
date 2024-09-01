@@ -1,39 +1,32 @@
 @use 'sass:math';
 
 /**
-* Подключение шрифтов локально из папки "./src/fonts"
+* Mounting fonts locally from a folder "./src/fonts"
 */
 @import 'config/fonts';
 
-/** Подключение переменных */
 @import 'config/vars';
 
-/** Обнуление */
+/** reset styles */
 @import 'config/reset';
 
 /**
-* Библиотеки
-* раскомментировать для использования
+* Swiper styles
 */
 @import 'libs/swiper';
 
 /**
-* Подключение custom scrollbar для всего сайта
+* nouislider styles
 */
 @import 'config/nouislider.scss';
 
 /**
-* Общие параметры
-*/
-@import 'config/base';
-
-/**
-* БЕМ блоки используемые во всё проекте
+* Common blocks
 */
 @import 'config/common';
 
 /**
-* Подключение стилей отдельных блоков и секций
+* Styles of blocks and sections
 */
 @import 'components/header';
 @import 'components/popup';

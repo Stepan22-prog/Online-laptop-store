@@ -15,7 +15,7 @@
 
 .product-card__img {
     margin-bottom: 15px;
-    transition: $standartTrans;
+    transition: $standardTrans;
 
     a {
         display: flex;
@@ -33,7 +33,7 @@
 
     &:hover {
         transform: scale(1.1);
-        transition: $standartTrans;
+        transition: $standardTrans;
     }
 }
 

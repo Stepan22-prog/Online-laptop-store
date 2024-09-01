@@ -1,5 +1,3 @@
-import { flsModules } from "./modules.js";
-
 export function isWebp() {
     function testWebP(callback) {
         let webP = new Image();

@@ -105,13 +105,13 @@
 
   &::after {
     bottom: 0;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   &::before {
     top: 0;
     height: 2.5px;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   @media (min-width: $laptop) {
@@ -126,12 +126,12 @@ html.menu-open .header-menu-icon {
 
   &::after {
     transform: rotate(45deg) translateX(-9px);
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   &::before {
     transform: rotate(-45deg) translateX(-9px);
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 }
 
@@ -179,7 +179,7 @@ html.menu-open .header-menu-icon {
 
   &:active {
     box-shadow: 0px 0px 8px 2px $yellowColor;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   @media (min-width: $mobileB) {
@@ -272,12 +272,12 @@ html.menu-open .header-menu-icon {
 .header-socials__item {
   svg {
     fill: $whiteColor;
-    transition: $standartTrans;
+    transition: $standardTrans;
 
     @media (any-hover: hover) {
       &:hover {
         fill: $yellowColor;
-        transition: $standartTrans;
+        transition: $standardTrans;
       }
     }
   }
@@ -312,14 +312,14 @@ html.menu-open .header-menu-icon {
 
     a {
       font-weight: 500;
-      transition: $standartTrans;
+      transition: $standardTrans;
     }
   }
 
   @media (any-hover: hover) {
     a:hover {
       color: $yellowColor;
-      transition: $standartTrans;
+      transition: $standardTrans;
     }
   }
 }
@@ -393,7 +393,7 @@ html.menu-open .header-menu-icon {
   font-weight: 500;
   color: $whiteColor;
   overflow-y: scroll;
-  transition: $standartTrans;
+  transition: $standardTrans;
 
   a {
     width: 100%;
@@ -406,7 +406,7 @@ html.menu-open .header-menu-icon {
 }
 
 html.menu-open .header__bottom {
-  transition: $standartTrans;
+  transition: $standardTrans;
   height: calc(100vh - (53px + 50px));
 }
 
@@ -426,12 +426,12 @@ html.menu-open .header__bottom {
 
   a {
     padding: 10px;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   a:active {
     padding-left: 20px;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   @media (min-width: $laptop) {
@@ -484,12 +484,12 @@ html.menu-open .header__bottom {
     background-image: url('../../img/icons/icons.svg#arrow-right');
     width: 20px;
     height: 20px;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   &._spoller-active::after {
     transform: rotate(90deg);
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   @media (min-width: $laptop) {
@@ -504,7 +504,7 @@ html.menu-open .header__bottom {
       background-image: url('../../img/icons/icons.svg#arrow-right');
       width: 15px;
       height: 15px;
-      transition: $standartTrans;
+      transition: $standardTrans;
     }
   }
 }
@@ -529,7 +529,7 @@ html.menu-open .header__bottom {
 .hedaer-catalog__item {
   a {
     padding-left: 20px;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   &:not(:last-child) {
@@ -538,7 +538,7 @@ html.menu-open .header__bottom {
 
   a:active {
     padding-left: 30px;
-    transition: $standartTrans;
+    transition: $standardTrans;
   }
 
   @media (any-hover: hover) {

@@ -10,12 +10,12 @@
     background: $blueColor;
     opacity: 0;
     pointer-events: none;
-    transition: $standartTrans;
+    transition: $standardTrans;
 
     &.is-open {
         opacity: 1;
         pointer-events: auto;
-        transition: $standartTrans;
+        transition: $standardTrans;
         overflow-y: auto;
     }
 
@@ -164,12 +164,12 @@
         width: 15px;
         height: 15px;
         background-image: url('../img/icons/icons.svg#arrow-right');
-        transition: $standartTrans;
+        transition: $standardTrans;
     }
 
     &._spoller-active::after {
         transform: translate(0, -50%) rotate(90deg);
-        transition: $standartTrans;
+        transition: $standardTrans;
     }
 
     @media (min-width: $tablet) {
