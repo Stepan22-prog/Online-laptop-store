@@ -1,11 +1,15 @@
-// for all containers
-[class*='__container'] {
+.container {
     max-width: ($containerWidth + $mainOffset * 2);
     margin: 0 auto;
     padding: 0 ($mainOffset);
 
     @media (min-width: $mobileB) {
         padding: 0 $mainOffsetMobileB;
+    }
+
+    &_mobile_off {
+        max-width: none;
+        padding: 0;
     }
 }
 

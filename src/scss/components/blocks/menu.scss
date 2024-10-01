@@ -1,0 +1,200 @@
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 15px;
+  position: relative;
+  background: transparent;
+
+  span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: $whiteColor;
+    display: inline-block;
+    border-radius: 5px;
+  }
+
+  span {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::after {
+    bottom: 0;
+    transition: $standardTrans;
+  }
+
+  &::before {
+    top: 0;
+    height: 2.5px;
+    transition: $standardTrans;
+  }
+
+  @media (min-width: $laptop) {
+    display: none;
+  }
+}
+
+html.menu-open .menu-icon {
+  span {
+    display: none;
+  }
+
+  &::after {
+    transform: rotate(45deg) translateX(-9px);
+    transition: $standardTrans;
+  }
+
+  &::before {
+    transform: rotate(-45deg) translateX(-9px);
+    transition: $standardTrans;
+  }
+}
+
+.menu {
+  list-style: none;
+
+  @media (min-width: $laptop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    border-bottom: 1px solid $whiteColor;
+
+    &:first-child {
+      padding: 0;
+      transition: none;
+    }
+  
+    a {
+      padding: 10px;
+      transition: $standardTrans;
+    }
+  
+    a:active {
+      padding-left: 20px;
+      transition: $standardTrans;
+    }
+  
+    @media (min-width: $laptop) {
+      border-bottom: none;
+  
+      a {
+        padding: 15px;
+        transition: 0.1s;
+      }
+  
+      a:active {
+        padding-left: 15px;
+      }
+    }
+  
+    @media (any-hover: hover) {
+      &:hover>a {
+        color: $yellowColor;
+        transition: 0.1s;
+      }
+    }
+  }
+
+
+}
+
+.menu-catalog {
+  position: relative;
+  height: 100%;
+
+  &__btn {
+    padding: 10px;
+    background: $yellowColor;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+  
+    &::after {
+      position: absolute;
+      right: 10px;
+      content: '';
+      display: inline-block;
+      background-image: url('../../img/icons/icons.svg#arrow-right');
+      width: 20px;
+      height: 20px;
+      transition: $standardTrans;
+    }
+  
+    &._spoller-active::after {
+      transform: rotate(90deg);
+      transition: $standardTrans;
+    }
+  
+    @media (min-width: $laptop) {
+      padding: 14px 27px 14px 14px;
+  
+      &::after {
+        position: absolute;
+        right: 7px;
+        top: 18px;
+        content: '';
+        display: inline-block;
+        background-image: url('../../img/icons/icons.svg#arrow-right');
+        width: 15px;
+        height: 15px;
+        transition: $standardTrans;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+  
+    @media (min-width: $laptop) {
+      position: absolute;
+      top: 49px;
+      z-index: 2;
+      background: $blueColor;
+      min-width: 200px;
+      overflow-y: auto;
+      max-height: calc(100vh - 140px);
+      width: 400px;
+      max-width: max-content;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .33);
+    }
+  }
+
+  &__item {
+    a {
+      width: 100%;
+      padding-left: 20px;
+      transition: $standardTrans;
+    }
+  
+    &:not(:last-child) {
+      border-bottom: 1px solid $whiteColor;
+    }
+  
+    a:active {
+      padding-left: 30px;
+      transition: $standardTrans;
+    }
+  
+    @media (any-hover: hover) {
+      a:hover {
+        color: $yellowColor;
+        transition: 0.1s;
+      }
+    }
+  }
+}

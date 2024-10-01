@@ -1,81 +1,79 @@
 <header class="header">
 	<div class="header__top">
-		<div class="header-logo"><a href="./index.html"><img src="img/logo.jpg" alt="Laptopia logo"></a></div>
-		<div class="header-interactive">
-			<div class="header-interactive__container">
-				<button class="header-menu-icon js-icon-menu">
-					<span></span>
+		<div class="logo"><a href="./index.html"><img src="img/logo.jpg" alt="Laptopia logo"></a></div>
+		<div class="header__row">
+			<button class="menu-icon js-icon-menu">
+				<span></span>
+			</button>
+			<div class="search">
+				<input type="text" class="search__input" placeholder="Пошук товарів">
+				<button class="search__btn button">
+					<svg width="18" height="18">
+						<use xlink:href="img/icons/icons.svg#search" fill="#fff"></use>
+					</svg>
+					<span>Шукати</span>
 				</button>
-				<div class="header-search">
-					<input type="text" class="header-search__input" placeholder="Пошук товарів">
-					<button class="header-search__btn button">
-						<svg width="18" height="18">
-							<use xlink:href="img/icons/icons.svg#search" fill="#fff"></use>
-						</svg>
-						<span>Шукати</span>
-					</button>
-				</div>
-				<div class="header-interactive__group">
-					<div data-spollers class="header-contacts">
-						<button type="button" data-spoller class="header-contacts__btn">
-							<svg width="30" height="30">
-								<use xlink:href="img/icons/icons.svg#phone"></use>
-							</svg>
-						</button>
-						<div class="header-contacts__body">
-							<ul class="header-phones">
-								<li class="header-phones__item"><a href="tel:+0885444800">088-544-4800</a></li>
-								<li class="header-phones__item"><a href="tel:+5444487859">544-448-7859</a></li>
-							</ul>
-							<ul class="header-socials">
-								<li class="header-socials__item">
-									<a href="#">
-										<svg width="25" height="25">
-											<use xlink:href="img/icons/icons.svg#telegram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="header-socials__item">
-									<a href="#">
-										<svg width="25" height="25">
-											<use xlink:href="img/icons/icons.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<button data-type="cart" class="header-cart button">
+			</div>
+			<div class="header__actions">
+				<div data-spollers class="header__contacts">
+					<button type="button" data-spoller class="header__contacts-btn">
 						<svg width="30" height="30">
-							<use xlink:href="img/icons/icons.svg#cart"></use>
+							<use xlink:href="img/icons/icons.svg#phone"></use>
 						</svg>
-						<span class="header-cart__text">Кошик</span>
-						<span class="header-cart__number">3</span>
 					</button>
+					<div class="header__contacts-body">
+						<ul class="header__phones phones">
+							<li class="phones__item"><a href="tel:+0885444800">088-544-4800</a></li>
+							<li class="phones__item"><a href="tel:+5444487859">544-448-7859</a></li>
+						</ul>
+						<ul class="header__socials socials">
+							<li class="socials__item">
+								<a href="#">
+									<svg width="25" height="25">
+										<use xlink:href="img/icons/icons.svg#telegram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="#">
+									<svg width="25" height="25">
+										<use xlink:href="img/icons/icons.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+				<button data-type="cart" class="cart-button button">
+					<svg width="30" height="30">
+						<use xlink:href="img/icons/icons.svg#cart"></use>
+					</svg>
+					<span class="cart-button__text">Кошик</span>
+					<span class="cart-button__number">3</span>
+				</button>
 			</div>
 		</div>
 	</div>
 	<nav class="header__bottom">
-		<ul class="header-menu">
-			<li class="header-menu__item">
-				<div class="header-catalog" data-spollers>
-					<button class="header-catalog__btn" type="button" data-spoller>Каталог</button>
-					<ul class="header-catalog__list">
-						<li class="hedaer-catalog__item"><a href="./catalog.html">Ноутбуки</a></li>
-						<li class="hedaer-catalog__item"><a href="./catalog.html">Комплекутючі для ПК</a></li>
-						<li class="hedaer-catalog__item"><a href="./catalog.html">Роутери</a></li>
-						<li class="hedaer-catalog__item"><a href="./catalog.html">Монітори</a></li>
+		<ul class="menu container container_mobile_off">
+			<li class="menu__item">
+				<div class="menu-catalog" data-spollers>
+					<button class="menu-catalog__btn" type="button" data-spoller>Каталог</button>
+					<ul class="menu-catalog__list">
+						<li class="menu-catalog__item"><a href="./catalog.html">Ноутбуки</a></li>
+						<li class="menu-catalog__item"><a href="./catalog.html">Комплекутючі для ПК</a></li>
+						<li class="menu-catalog__item"><a href="./catalog.html">Роутери</a></li>
+						<li class="menu-catalog__item"><a href="./catalog.html">Монітори</a></li>
 					</ul>
 				</div>
 			</li>
-			<li class="header-menu__item"><a href="./sale.html">Акції</a></li>
-			<li class="header-menu__item"><a href="#">Оплата</a></li>
-			<li class="header-menu__item"><a href="#">Гарантія</a></li>
-			<li class="header-menu__item"><a href="./contacts.html">Контакти</a></li>
-			<li class="header-menu__item"><a href="#">Доставка</a></li>
-			<li class="header-menu__item"><a href="#">Про нас</a></li>
-			<li class="header-menu__item"><a href="./reviews.html">Відгуки</a></li>
+			<li class="menu__item"><a href="./sale.html">Акції</a></li>
+			<li class="menu__item"><a href="#">Оплата</a></li>
+			<li class="menu__item"><a href="#">Гарантія</a></li>
+			<li class="menu__item"><a href="./contacts.html">Контакти</a></li>
+			<li class="menu__item"><a href="#">Доставка</a></li>
+			<li class="menu__item"><a href="#">Про нас</a></li>
+			<li class="menu__item"><a href="./reviews.html">Відгуки</a></li>
 		</ul>
 	</nav>
 </header>

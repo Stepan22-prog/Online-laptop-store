@@ -28,7 +28,14 @@
 /**
 * Styles of blocks and sections
 */
-@import 'components/header';
+@import 'components/blocks/logo';
+@import 'components/blocks/search';
+@import 'components/blocks/menu';
+@import 'components/blocks/phones';
+@import 'components/blocks/socials';
+@import 'components/blocks/cart-button';
+
+@import 'components/sections/header';
 @import 'components/popup';
 @import 'components/cart-popup';
 @import 'components/categories';
@@ -38,7 +45,7 @@
 @import 'components/catalog';
 @import 'components/filter';
 @import 'components/pagging';
-@import 'components/contacts';
+// @import 'components/contacts';
 @import 'components/product';
 @import 'components/gallery-popup';
 @import 'components/reviews';

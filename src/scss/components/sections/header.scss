@@ -1,0 +1,137 @@
+//Header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: $greenColor;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .22);
+
+  &__top {
+    @media (min-width: $laptop) {
+      max-width: $containerWidth;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 80px;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content 1fr max-content;
+    gap: 8px;
+    background: $blueColor;
+    padding: 10px 15px;
+  
+    @media (min-width: $mobileB) {
+      gap: 15px;
+    }
+  
+    @media (min-width: $laptop) {
+      justify-content: space-between;
+      grid-template-columns: 1fr max-content;
+      background: transparent;
+      padding: 0;
+      gap: 50px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contacts {
+    margin-right: 8px;
+    position: relative;
+  
+    &.active {
+      .header-contacts__body {
+        transition: 0.4s;
+        box-shadow: 0px 5px 8px 4px rgba($blueColor, 30%);
+      }
+    }
+  
+    @media (min-width: $laptop) {
+      max-width: none;
+    }
+  
+    @media (min-width: $laptop) {
+      margin-right: 30px;
+    }
+  }
+
+  &__contacts-btn {
+    background: transparent;
+  
+    svg {
+      fill: $whiteColor;
+    }
+  
+    @media (min-width: $laptop) {
+      display: none;
+    }
+  }
+
+  &__contacts-body {
+    position: absolute;
+    top: 42px;
+    left: -46px;
+    width: max-content;
+    overflow: hidden;
+    transition: 0.4s;
+    z-index: 2;
+    background: $blueColor;
+    box-shadow: none;
+    border-radius: 0 0 5px 5px;
+  
+    @media (min-width: $laptop) {
+      display: flex;
+      position: static;
+      background: transparent;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__socials {
+    @media (min-width: $laptop) {
+      align-items: center;
+      padding: 0;
+      margin-right: 15px
+    }
+  }
+
+  &__phones .phones__item {
+    border-bottom: 1px solid $whiteColor;
+  
+    @media (min-width: $laptop) {
+      border-bottom: none;
+    }
+  }
+
+  &__bottom {
+    background: $blueColor;
+    height: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: $whiteColor;
+    overflow-y: scroll;
+    transition: $standardTrans;
+  
+    @media (min-width: $laptop) {
+      height: auto;
+      overflow-y: visible;
+    }
+  }
+}
+
+html.menu-open .header__bottom {
+  transition: $standardTrans;
+  height: calc(100vh - (55px + 50px));
+}

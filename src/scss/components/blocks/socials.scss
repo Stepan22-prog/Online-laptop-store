@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  padding: 6px 10px;
+  list-style: none;
+
+  &__item {
+    svg {
+      fill: $whiteColor;
+      transition: $standardTrans;
+  
+      @media (any-hover: hover) {
+        &:hover {
+          fill: $yellowColor;
+          transition: $standardTrans;
+        }
+      }
+    }
+  
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

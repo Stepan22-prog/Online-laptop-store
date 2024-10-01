@@ -1,0 +1,13 @@
+.logo {
+  max-height: 50px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    max-height: 70px;
+  }
+
+  @media (min-width: $laptop) {
+    justify-content: start;
+  }
+}
