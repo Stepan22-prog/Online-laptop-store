@@ -19,7 +19,11 @@
     }
 }
 
-.footer-column {
+.footer__column {
+    &_align_center {
+        align-self: center;
+    }
+
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -31,17 +35,10 @@
             order: 4;
         }
 
-        &.footer-column_align-center {
-            align-self: center;
+        &_align_center {
+           align-self: baseline;
         }
     }
-}
-
-.footer-logo {
-    width: 150px;
-    margin: 0 auto;
-    border-radius: 5px;
-    overflow: hidden;
 }
 
 .footer-column__title {
@@ -70,17 +67,6 @@
         &:hover {
             color: $yellowColor;
             transition: 0.2s;
-        }
-    }
-
-    svg {
-        transition: 0.2s;
-
-        @media (any-hover: hover) {
-            &:hover {
-                fill: $yellowColor;
-                transition: 0.2s;
-            }
         }
     }
 }
