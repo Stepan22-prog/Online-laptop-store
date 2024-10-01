@@ -65,6 +65,16 @@ textarea {
     color: $primaryColor;
 }
 
+.link {
+    transition: 0.2s;
+    @media (any-hover: hover) {
+        &:hover {
+            color: $accentColor;
+            transition: 0.2s;
+        }
+    }
+}
+
 //========================================================================================================================================================
 
 //titles
@@ -133,7 +143,7 @@ h3 {
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid $addtionalColor;
+    border: 2px solid $additionalColor;
     margin-bottom: 16px;
 }
 
@@ -230,7 +240,7 @@ table {
 
 tr {
     &:nth-child(2n) {
-        background: $addtionalColor;
+        background: $additionalColor;
     }
 }
 

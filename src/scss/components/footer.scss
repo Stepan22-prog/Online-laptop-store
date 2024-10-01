@@ -1,72 +1,59 @@
 .footer {
     background: $secondaryColor;
-}
 
-.footer__body {
-    padding: 15px 0;
-
-    @media (min-width: $mobileB) {
-        padding: 25px 0;
-    }
-
-    @media (min-width: $tablet) {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    @media (min-width: $laptop) {
-        max-width: 85%;
-    }
-}
-
-.footer__column {
-    &_align_center {
-        align-self: center;
-    }
-
-    &:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
-    @media (min-width: $tablet) {
-        margin-right: 40px;
-
-        &.footer-column_last {
-            order: 4;
+    &__body {
+        padding: 15px 0;
+    
+        @media (min-width: $mobileB) {
+            padding: 25px 10px;
         }
-
-        &_align_center {
-           align-self: baseline;
-        }
-    }
-}
-
-.footer-column__title {
-    display: flex;
-    align-items: center;
-    color: $thirdColor;
-
-    svg {
-        fill: $thirdColor;
+    
         @media (min-width: $tablet) {
-            display: none;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        @media (min-width: $laptop) {
+            max-width: 85%;
         }
     }
-}
 
-.footer-column__list {
-    list-style: none;
-}
-
-.footer-column__item {
-    color: $primaryColor;
-    padding: 4px 0px 4px 10px;
-    transition: 0.2s;
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: $accentColor;
-            transition: 0.2s;
+    &__column {
+        &_align_center {
+            margin: 0 auto;
         }
+    
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    
+        @media (min-width: $tablet) {
+            margin-right: 40px;
+    
+            &_last {
+                order: 4;
+            }
+    
+            &_align_center {
+               margin: 0;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        color: $thirdColor;
+
+        svg {
+            fill: $thirdColor;
+            @media (min-width: $tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__phones {
+        padding: 4px 0 0 10px;
     }
 }

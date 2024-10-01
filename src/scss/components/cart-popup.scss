@@ -61,7 +61,7 @@
 .cart-product-amount {
     display: flex;
     align-items: center;
-    border: 1px solid $addtionalColor;
+    border: 1px solid $additionalColor;
     border-radius: 5px;
 }
 
@@ -82,8 +82,8 @@
     text-align: center;
     font-size: 18px;
     height: 100%;
-    border-right: 1px solid $addtionalColor;
-    border-left: 1px solid $addtionalColor;
+    border-right: 1px solid $additionalColor;
+    border-left: 1px solid $additionalColor;
     &:focus {
         box-shadow: none;
         border: none;

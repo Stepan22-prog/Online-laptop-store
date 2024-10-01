@@ -5,19 +5,9 @@
   list-style: none;
 
   &__item {
-    padding: 10px 5px;
-  
-    a {
-      color: $primaryColor;
-    }
-  
+    padding: 5px 0;
+
     @media (min-width: $laptop) {
-      padding: 0;
-  
-      &:not(:last-child) {
-        margin-bottom: 5px;
-      }
-  
       a {
         font-weight: 500;
         transition: $standardTrans;

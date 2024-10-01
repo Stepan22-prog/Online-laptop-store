@@ -97,13 +97,6 @@ html.menu-open .menu-icon {
         padding-left: 15px;
       }
     }
-  
-    @media (any-hover: hover) {
-      &:hover>a {
-        color: $accentColor;
-        transition: 0.1s;
-      }
-    }
   }
 
 
@@ -188,13 +181,6 @@ html.menu-open .menu-icon {
     a:active {
       padding-left: 30px;
       transition: $standardTrans;
-    }
-  
-    @media (any-hover: hover) {
-      a:hover {
-        color: $accentColor;
-        transition: 0.1s;
-      }
     }
   }
 }

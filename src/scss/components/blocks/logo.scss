@@ -1,11 +1,14 @@
 .logo {
-  max-height: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   overflow: hidden;
 
   &_border-radius {
-    border-radius: 5px;
+    img {
+      width: auto;
+      border-radius: 5px;
+    }
   }
 
   @media (min-width: $tablet) {

@@ -12,7 +12,7 @@
     @media (min-width: $laptop) {
       max-width: $containerWidth;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 7px 20px;
       display: grid;
       grid-template-columns: max-content 1fr;
       gap: 80px;
@@ -108,9 +108,11 @@
   }
 
   &__phones .phones__item {
+    padding: 10px 5px;
     border-bottom: 1px solid $primaryColor;
   
     @media (min-width: $laptop) {
+      padding: 3px;
       border-bottom: none;
     }
   }
@@ -120,7 +122,6 @@
     height: 0;
     font-size: 18px;
     font-weight: 500;
-    color: $primaryColor;
     overflow-y: scroll;
     transition: $standardTrans;
   
