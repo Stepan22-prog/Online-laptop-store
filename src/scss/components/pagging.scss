@@ -9,7 +9,7 @@
     align-items: center;
 
     svg {
-        fill: $blueColor;
+        fill: $secondaryColor;
     }
 
     @media (min-width: $tablet) {
@@ -34,12 +34,12 @@
     margin-right: 1px;
     font-size: 18px;
     font-weight: 500;
-    color: $whiteColor;
-    background: $blueColor;
-    border: 1px solid $blueColor;
+    color: $primaryColor;
+    background: $secondaryColor;
+    border: 1px solid $secondaryColor;
 
     &.pagging__item_active {
-        color: $blueColor;
+        color: $secondaryColor;
         background: transparent;
     }
 

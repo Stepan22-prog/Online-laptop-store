@@ -5,12 +5,12 @@
 
   &__item {
     svg {
-      fill: $whiteColor;
+      fill: $primaryColor;
       transition: $standardTrans;
   
       @media (any-hover: hover) {
         &:hover {
-          fill: $yellowColor;
+          fill: $accentColor;
           transition: $standardTrans;
         }
       }

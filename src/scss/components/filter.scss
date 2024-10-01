@@ -7,7 +7,7 @@
     height: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
-    background: $blueColor;
+    background: $secondaryColor;
     opacity: 0;
     pointer-events: none;
     transition: $standardTrans;
@@ -34,7 +34,7 @@
     font-size: 20px;
     font-weight: 500;
     border-radius: 8px;
-    background: $blueColor;
+    background: $secondaryColor;
     padding: 7px 5px;
     margin-bottom: 15px;
 
@@ -77,8 +77,8 @@
 .filter-applied-item__title {
     font-size: 16px;
     padding: 6px;
-    color: $whiteColor;
-    border: 1px solid $whiteColor;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
     border-radius: 5px;
     margin-bottom: 8px;
 
@@ -124,7 +124,7 @@
 
 .filter-reset {
     font-size: 16px;
-    color: $whiteColor;
+    color: $primaryColor;
     text-decoration: underline;
     background: transparent;
     margin: 0px 10px 16px 10px;
@@ -136,7 +136,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            color: $yellowColor;
+            color: $accentColor;
             transition: 0.2s;
         }
     }
@@ -149,9 +149,9 @@
     width: 100%;
     font-size: 20px;
     font-weight: 500;
-    color: $whiteColor;
+    color: $primaryColor;
     padding: 10px;
-    background: $yellowColor;
+    background: $accentColor;
     margin-bottom: 10px;
 
     &::after {
@@ -206,7 +206,7 @@
     display: inline-block;
     width: 30px;
     height: 2px;
-    background-color: $whiteColor;
+    background-color: $primaryColor;
     margin: 0px 3px;
 }
 
@@ -217,14 +217,14 @@
 }
 
 .filter-group__range {
-    background: $whiteColor;
+    background: $primaryColor;
     border: none;
     box-shadow: none;
     margin: 0px 20px 14px 17px;
     height: 15px;
 
     .noUi-connect {
-        background: $greenColor;
+        background: $thirdColor;
     }
 
     .noUi-handle {
@@ -232,7 +232,7 @@
         width: 30px;
         height: 30px;
         border-radius: 50px;
-        background: $yellowColor;
+        background: $accentColor;
         box-shadow: none;
         border: none;
 
@@ -278,7 +278,7 @@
     }
 
     &:before {
-        background: $greenColor;
+        background: $thirdColor;
     }
 }
 
@@ -291,7 +291,7 @@
 
     position: relative;
     font-size: 16px;
-    color: $whiteColor;
+    color: $primaryColor;
     flex: auto;
     padding-left: 20px;
 
@@ -303,7 +303,7 @@
         position: absolute;
         top: 3px;
         left: 0;
-        background: $whiteColor;
+        background: $primaryColor;
         border-radius: 3px;
     }
 
@@ -313,5 +313,5 @@
 }
 
 .filter-group__info {
-    color: $greyColor;
+    color: $addtionalColor;
 }

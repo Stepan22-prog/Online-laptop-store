@@ -8,7 +8,7 @@
     padding: 10px 5px;
   
     a {
-      color: $whiteColor;
+      color: $primaryColor;
     }
   
     @media (min-width: $laptop) {
@@ -26,7 +26,7 @@
   
     @media (any-hover: hover) {
       a:hover {
-        color: $yellowColor;
+        color: $accentColor;
         transition: $standardTrans;
       }
     }

@@ -12,7 +12,7 @@
     left: 0;
     width: 30px;
     height: 2px;
-    background: $whiteColor;
+    background: $primaryColor;
     display: inline-block;
     border-radius: 5px;
   }
@@ -68,7 +68,7 @@ html.menu-open .menu-icon {
   }
 
   &__item {
-    border-bottom: 1px solid $whiteColor;
+    border-bottom: 1px solid $primaryColor;
 
     &:first-child {
       padding: 0;
@@ -100,7 +100,7 @@ html.menu-open .menu-icon {
   
     @media (any-hover: hover) {
       &:hover>a {
-        color: $yellowColor;
+        color: $accentColor;
         transition: 0.1s;
       }
     }
@@ -115,7 +115,7 @@ html.menu-open .menu-icon {
 
   &__btn {
     padding: 10px;
-    background: $yellowColor;
+    background: $accentColor;
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
@@ -164,7 +164,7 @@ html.menu-open .menu-icon {
       position: absolute;
       top: 49px;
       z-index: 2;
-      background: $blueColor;
+      background: $secondaryColor;
       min-width: 200px;
       overflow-y: auto;
       max-height: calc(100vh - 140px);
@@ -182,7 +182,7 @@ html.menu-open .menu-icon {
     }
   
     &:not(:last-child) {
-      border-bottom: 1px solid $whiteColor;
+      border-bottom: 1px solid $primaryColor;
     }
   
     a:active {
@@ -192,7 +192,7 @@ html.menu-open .menu-icon {
   
     @media (any-hover: hover) {
       a:hover {
-        color: $yellowColor;
+        color: $accentColor;
         transition: 0.1s;
       }
     }

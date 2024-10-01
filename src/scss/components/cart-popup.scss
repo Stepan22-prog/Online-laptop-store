@@ -42,7 +42,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            color: $yellowColor;
+            color: $accentColor;
             transition: 0.2s;
         }
     }
@@ -61,7 +61,7 @@
 .cart-product-amount {
     display: flex;
     align-items: center;
-    border: 1px solid $greyColor;
+    border: 1px solid $addtionalColor;
     border-radius: 5px;
 }
 
@@ -82,8 +82,8 @@
     text-align: center;
     font-size: 18px;
     height: 100%;
-    border-right: 1px solid $greyColor;
-    border-left: 1px solid $greyColor;
+    border-right: 1px solid $addtionalColor;
+    border-left: 1px solid $addtionalColor;
     &:focus {
         box-shadow: none;
         border: none;
@@ -93,8 +93,8 @@
 .cart-product-price__old {
     margin-bottom: 0;
     font-size: 14px;
-    color: $redColor;
-    text-decoration: line-through solid $redColor;
+    color: $errorColor;
+    text-decoration: line-through solid $errorColor;
 
     @media (min-width: $tablet) {
         font-size: 18px;
@@ -121,7 +121,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            color: $yellowColor;
+            color: $accentColor;
             transition: 0.2s;
         }
     }

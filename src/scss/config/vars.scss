@@ -11,16 +11,15 @@ $mainOffsetMobileB: 15px;
 $mainFont: 'Inter';
 $mainWeight: 400;
 
-$whiteColor: #fff;
-$blackColor: #000;
-$yellowColor: #FF9000;
-$blueColor: #2C5E98;
-$greenColor: #76BB9D;
-$greyColor: #8D949B;
-$redColor: #BC4749;
+$primaryColor: #fff;
+$textColor: #000;
+$accentColor: #FF9000;
+$secondaryColor: #2C5E98;
+$thirdColor: #76BB9D;
+$additionalColor: #8D949B;
+$errorColor: #BC4749;
 
 $fontFamily: $mainFont, sans-serif;
-$fontColor: $blackColor;
 $fontSize: 16;
 $fontWeight: $mainWeight;
 

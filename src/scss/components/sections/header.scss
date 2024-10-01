@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   z-index: 2;
-  background: $greenColor;
+  background: $thirdColor;
   box-shadow: 0 2px 2px rgba(0, 0, 0, .22);
 
   &__top {
@@ -26,7 +26,7 @@
     align-items: center;
     grid-template-columns: max-content 1fr max-content;
     gap: 8px;
-    background: $blueColor;
+    background: $secondaryColor;
     padding: 10px 15px;
   
     @media (min-width: $mobileB) {
@@ -54,7 +54,7 @@
     &.active {
       .header-contacts__body {
         transition: 0.4s;
-        box-shadow: 0px 5px 8px 4px rgba($blueColor, 30%);
+        box-shadow: 0px 5px 8px 4px rgba($secondaryColor, 30%);
       }
     }
   
@@ -71,7 +71,7 @@
     background: transparent;
   
     svg {
-      fill: $whiteColor;
+      fill: $primaryColor;
     }
   
     @media (min-width: $laptop) {
@@ -87,7 +87,7 @@
     overflow: hidden;
     transition: 0.4s;
     z-index: 2;
-    background: $blueColor;
+    background: $secondaryColor;
     box-shadow: none;
     border-radius: 0 0 5px 5px;
   
@@ -108,7 +108,7 @@
   }
 
   &__phones .phones__item {
-    border-bottom: 1px solid $whiteColor;
+    border-bottom: 1px solid $primaryColor;
   
     @media (min-width: $laptop) {
       border-bottom: none;
@@ -116,11 +116,11 @@
   }
 
   &__bottom {
-    background: $blueColor;
+    background: $secondaryColor;
     height: 0;
     font-size: 18px;
     font-weight: 500;
-    color: $whiteColor;
+    color: $primaryColor;
     overflow-y: scroll;
     transition: $standardTrans;
   

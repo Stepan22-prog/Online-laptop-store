@@ -16,7 +16,7 @@
 }
 
 .categories-item {
-    border: 1px solid $greyColor;
+    border: 1px solid $addtionalColor;
     border-radius: 10px;
     transition: $standardTrans;
 
@@ -33,7 +33,7 @@
             }
 
             .categories-item__title {
-                color: $yellowColor;
+                color: $accentColor;
                 transition: $standardTrans;
             }
         }

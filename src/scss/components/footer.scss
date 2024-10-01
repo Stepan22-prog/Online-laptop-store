@@ -1,5 +1,5 @@
 .footer {
-    background: $blueColor;
+    background: $secondaryColor;
 }
 
 .footer__body {
@@ -44,10 +44,10 @@
 .footer-column__title {
     display: flex;
     align-items: center;
-    color: $greenColor;
+    color: $thirdColor;
 
     svg {
-        fill: $greenColor;
+        fill: $thirdColor;
         @media (min-width: $tablet) {
             display: none;
         }
@@ -59,13 +59,13 @@
 }
 
 .footer-column__item {
-    color: $whiteColor;
+    color: $primaryColor;
     padding: 4px 0px 4px 10px;
     transition: 0.2s;
 
     @media (any-hover: hover) {
         &:hover {
-            color: $yellowColor;
+            color: $accentColor;
             transition: 0.2s;
         }
     }

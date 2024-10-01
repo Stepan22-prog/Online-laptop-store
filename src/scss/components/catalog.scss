@@ -43,10 +43,10 @@
 .select__body {
     position: absolute;
     width: 100%;
-    border: 2px solid $blueColor;
+    border: 2px solid $secondaryColor;
     border-radius: 8px;
     min-width: 280px;
-    background: $whiteColor;
+    background: $primaryColor;
 }
 
 .select_open .select__title::after {
@@ -74,7 +74,7 @@
 .select__option {
     width: 100%;
     padding: 5px 15px;
-    color: $yellowColor;
+    color: $accentColor;
     font-size: 20px;
     font-weight: 500;
     background: transparent;
@@ -82,7 +82,7 @@
 }
 
 .select__option {
-    border-top: 1px solid $blueColor;
+    border-top: 1px solid $secondaryColor;
 }
 
 .calalog__products {

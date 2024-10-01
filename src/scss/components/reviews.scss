@@ -49,7 +49,7 @@
     flex: 0 0 20%;
     height: 100%;
     cursor: pointer;
-    color: $greyColor;
+    color: $addtionalColor;
 }
 
 .rating__label::before {
@@ -63,7 +63,7 @@
 .rating__label:checked~.rating__label:hover,
 .rating__item:checked,
 .rating__item:checked~.rating__label {
-    color: $yellowColor;
+    color: $accentColor;
 }
 
 .rating__value {
@@ -114,7 +114,7 @@
 
 .reviews-item__date {
     font-size: 14px;
-    color: $greyColor;
+    color: $addtionalColor;
     align-self: self-end;
     flex: auto;
     margin-right: 20px;
@@ -136,10 +136,10 @@
 .user-rating__item {
     font-size: 18px;
     letter-spacing: -4px;
-    color: $greyColor;
+    color: $addtionalColor;
 
     &._active {
-        color: $yellowColor;
+        color: $accentColor;
     }
 
     @media (min-width: $tablet) {

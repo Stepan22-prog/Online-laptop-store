@@ -42,23 +42,27 @@ img {
 input,
 textarea {
     &:focus {
-        border: 1px solid rgba($yellowColor, 30%);
-        box-shadow: 0px 0px 8px 2px $yellowColor;
+        border: 1px solid rgba($accentColor, 30%);
+        box-shadow: 0px 0px 8px 2px $accentColor;
     }
 }
 
 .button {
     font-size: 16px;
-    background: $yellowColor;
+    background: $accentColor;
     transition: $standardTrans;
-    color: $whiteColor;
+    color: $primaryColor;
 
     @media (any-hover: hover) {
         &:hover {
-            box-shadow: 0px 0px 8px 2px $yellowColor;
+            box-shadow: 0px 0px 8px 2px $accentColor;
             transition: $standardTrans;
         }
     }
+}
+
+.text-light {
+    color: $primaryColor;
 }
 
 //========================================================================================================================================================
@@ -129,7 +133,7 @@ h3 {
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid $greyColor;
+    border: 2px solid $addtionalColor;
     margin-bottom: 16px;
 }
 
@@ -147,8 +151,8 @@ h3 {
 
 .form__btn {
     width: 100%;
-    background: $yellowColor;
-    color: $whiteColor;
+    background: $accentColor;
+    color: $primaryColor;
     font-size: 20px;
     font-weight: 500;
     border-radius: 8px;
@@ -226,7 +230,7 @@ table {
 
 tr {
     &:nth-child(2n) {
-        background: $greyColor;
+        background: $addtionalColor;
     }
 }
 
@@ -234,7 +238,7 @@ td,
 th {
     text-align: left;
     padding: 10px 5px;
-    border: 1px solid $blackColor;
+    border: 1px solid $textColor;
 
     @media (min-width: $laptop) {
         font-size: 18px;
@@ -269,7 +273,7 @@ p {
     z-index: 1;
 
     svg {
-        fill: $whiteColor;
+        fill: $primaryColor;
     }
 
     @media (min-width: $tablet) {
@@ -285,7 +289,7 @@ p {
 }
 
 .callback__btn {
-    background: $yellowColor;
+    background: $accentColor;
     bottom: 10px;
 
     svg {
@@ -304,7 +308,7 @@ p {
         display: block;
         width: 55px;
         height: 55px;
-        background: $yellowColor;
+        background: $accentColor;
         border-radius: 50%;
         transition: all 200ms;
     }
@@ -319,7 +323,7 @@ p {
         display: block;
         width: 50px;
         height: 50px;
-        background: $yellowColor;
+        background: $accentColor;
         border-radius: 50%;
         animation: pulse-border 1100ms ease-out infinite;
     }
@@ -370,9 +374,9 @@ p {
 
 .to-top {
     display: none;
-    background: $greenColor;
+    background: $thirdColor;
     bottom: 70px;
-    box-shadow: 0px 0px 8px 5px rgba($greenColor, 0.50);
+    box-shadow: 0px 0px 8px 5px rgba($thirdColor, 0.50);
 
     svg {
         width: 40px;
