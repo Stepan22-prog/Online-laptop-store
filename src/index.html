@@ -12,16 +12,8 @@
     <main class="page">
       @@include('html/categories.html')
       @@include('html/new.html')
-      <button class="action-button to-top">
-        <svg width="50" height="50">
-          <use xlink:href="img/icons/icons.svg#more"></use>
-        </svg>
-      </button>
-      <button data-type="callback" class="action-button callback-btn">
-        <svg width="50" height="50">
-          <use xlink:href="img/icons/icons.svg#phone"></use>
-        </svg>
-      </button>
+      @@include('html/to-top.html')
+      @@include('html/callback-btn.html')
     </main>
 
     @@include('html/footer.html')
