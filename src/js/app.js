@@ -24,8 +24,8 @@ jQuery(function ($) {
 
 //sliders
 import Swiper, { Autoplay, Navigation, Pagination, Thumbs, Zoom } from 'swiper';
-if (document.querySelector('.new-slider')) {
-  const swiper = new Swiper('.new-slider', {
+if (document.querySelector('.new__slider')) {
+  const swiper = new Swiper('.new__slider', {
     modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -48,13 +48,13 @@ if (document.querySelector('.new-slider')) {
       },
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.slider-pagination',
       type: 'bullets',
       clickable: true,
     },
     navigation: {
-      nextEl: '.new-next',
-      prevEl: '.new-prev',
+      nextEl: '.slider-next',
+      prevEl: '.slider-prev',
     },
     autoplay: {
       delay: 3000,
