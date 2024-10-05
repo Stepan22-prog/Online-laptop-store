@@ -1,18 +1,16 @@
 <section data-close-overlay data-popup="cart" class="cart popup">
     <div class="popup__content">
         <div class="popup__header">
-            <h2 class="popup__title title-first">Ваш кошик</h2>
+            <h2 class="popup__title title">Ваш кошик</h2>
             <button class="popup__close button-close">
                 <svg width="35" height="35">
                     <use xlink:href="img/icons/icons.svg#close"></use>
                 </svg>
             </button>
         </div>
-        <ul class="cart-products-list">
+        <ul class="cart__list">
             <li class="cart-product">
-                <div class="cart-product__img">
-                    <a href="./product.html"><img src="img/cart__img.jpg" alt="Ноутбук 17.3 ASUS ROG Strix SCAR(G733PY-XS96)"></a>
-                </div>
+                <a class="cart-product__img" href="./product.html"><img src="img/cart__img.jpg" alt="Ноутбук 17.3 ASUS ROG Strix SCAR(G733PY-XS96)"></a>
                 <button class="cart-product__delete">
                     <svg width="35" height="35">
                         <use xlink:href="img/icons/icons.svg#delete"></use>
@@ -27,16 +25,14 @@
                         <input type="number" class="cart-product-amount__number" value="1"></input>
                         <button class="cart-product-amount__decrease">-</button>
                     </div>
-                    <div class="cart-product-price">
-                        <p class="cart-product-price__old">19999 грн</p>
-                        <p class="cart-product-price__actual title-second">15000 грн</p>
+                    <div class="cart-product__coloumn">
+                        <p class="cart-product__price-old">19999 грн</p>
+                        <p class="cart-product__price-actual title-second">15000 грн</p>
                     </div>
                 </div>
             </li>
             <li class="cart-product">
-                <div class="cart-product__img">
-                    <a href="./product.html"><img src="img/cart__img.jpg" alt="Ноутбук 17.3 ASUS ROG Strix SCAR(G733PY-XS96)"></a>
-                </div>
+                <a class="cart-product__img" href="./product.html"><img src="img/cart__img.jpg" alt="Ноутбук 17.3 ASUS ROG Strix SCAR(G733PY-XS96)"></a>
                 <button class="cart-product__delete">
                     <svg width="35" height="35">
                         <use xlink:href="img/icons/icons.svg#delete"></use>
@@ -51,15 +47,13 @@
                         <input type="number" class="cart-product-amount__number" value="1"></input>
                         <button class="cart-product-amount__decrease">-</button>
                     </div>
-                    <div class="cart-product-price">
-                        <p class="cart-product-price__actual title-second">15000 грн</p>
+                    <div class="cart-product__coloumn">
+                        <p class="cart-product__price-actual title-second">15000 грн</p>
                     </div>
                 </div>
             </li>
             <li class="cart-product">
-                <div class="cart-product__img">
-                    <a href="./product.html"><img src="img/cart__img.jpg" alt="Ноутбук 17.3 ASUS ROG Strix SCAR(G733PY-XS96)"></a>
-                </div>
+                <a class="cart-product__img" href="./product.html"><img src="img/cart__img.jpg" alt="Ноутбук 17.3 ASUS ROG Strix SCAR(G733PY-XS96)"></a>
                 <button class="cart-product__delete">
                     <svg width="35" height="35">
                         <use xlink:href="img/icons/icons.svg#delete"></use>
@@ -74,9 +68,9 @@
                         <input type="number" class="cart-product-amount__number" value="1"></input>
                         <button class="cart-product-amount__decrease">-</button>
                     </div>
-                    <div class="cart-product-price">
-                        <p class="cart-product-price__old">19999 грн</p>
-                        <p class="cart-product-price__actual title-second">15000 грн</p>
+                    <div class="cart-product__coloumn">
+                        <p class="cart-product__price-old">19999 грн</p>
+                        <p class="cart-product__price-actual title-second">15000 грн</p>
                     </div>
                 </div>
             </li>
@@ -86,11 +80,11 @@
                 <label for="name" class="form__label">Ваше ім'я та прізвище</label>
                 <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
             </div>
-            <div class="form__block _half-row">
+            <div class="form__block form__block_half-row">
                 <label for="email" class="form__label">Електронна пошта</label>
                 <input id="email" class="form__input" type="email" name="email" placeholder="mail@mail.com">
             </div>
-            <div class="form__block _half-row">
+            <div class="form__block form__block_half-row">
                 <label for="phone__cart" class="form__label">Телефон</label>
                 <input id="phone__cart" class="form__input" type="tel" name="phone" placeholder="+38 (___) ___-____"
                     required>
@@ -99,9 +93,9 @@
                 <label for="comment" class="form__label">Коментар до замовлення</label>
                 <textarea id="comment" class="form__textarea" name="comment" cols="20" rows="10" required></textarea>
             </div>
-            <div class="form__footer">
+            <div class="form__actions">
                 <button class="form__btn button" type="submit">Оформити замовлення</button>
-                <button data-close type="button" class="cart__continue button-close">Продорвжити покупки</button>
+                <button data-close type="button" class="cart__continue button-close">Продовжити покупки</button>
             </div>
         </form>
     </div>

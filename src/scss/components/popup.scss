@@ -21,34 +21,34 @@
         overflow-y: auto;
         visibility: visible;
     }
-}
 
-.popup__content {
-    background: $primaryColor;
-    height: max-content;
-    width: 100%;
-    min-height: 100%;
-    padding: 0 15px;
-
-    @media (min-width: $laptop) {
-        max-width: 840px;
-        border-radius: 10px;
-        margin: 30px 0;
-        min-height: auto;
-        padding: 5px 20px;
+    &__content {
+        background: $primaryColor;
+        height: max-content;
+        width: 100%;
+        min-height: 100%;
+        padding: 0 15px;
+    
+        @media (min-width: $laptop) {
+            max-width: 840px;
+            border-radius: 10px;
+            margin: 30px 0;
+            min-height: auto;
+            padding: 5px 20px;
+        }
     }
-}
 
-.popup__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0 10px 0;
-    border-bottom: 1px solid $textColor;
-    margin-bottom: 10px;
-
-    @media (min-width: $laptop) {
-        margin-bottom: 25px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0 10px 0;
+        border-bottom: 1px solid $textColor;
+        margin-bottom: 10px;
+    
+        @media (min-width: $laptop) {
+            margin-bottom: 25px;
+        }
     }
 }
 

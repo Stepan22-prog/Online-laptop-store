@@ -88,7 +88,7 @@ h1 {
     }
 }
 
-.section-title,
+.title-second,
 h2 {
     font-size: 25px;
     font-weight: 500;
@@ -110,75 +110,6 @@ h3 {
 
 //========================================================================================================================================================
 
-//form
-.form {
-    @media (min-width: $laptop) {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        &>* {
-            flex: 100%;
-        }
-    }
-}
-
-@media (min-width: $laptop) {
-    .form__block._half-row {
-        flex-basis: 48%;
-        flex-grow: 0;
-    }
-}
-
-.form__label {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.form__input,
-.form__textarea {
-    width: 100%;
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid $additionalColor;
-    margin-bottom: 16px;
-}
-
-.form__textarea {
-    resize: none;
-    max-height: 135px;
-}
-
-.form__footer {
-    @media (min-width: $tablet) {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-.form__btn {
-    width: 100%;
-    background: $accentColor;
-    color: $primaryColor;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 8px;
-    padding: 8px 15px;
-    margin-bottom: 16px;
-
-    &:active {
-        transform: scale(0.9);
-    }
-
-    @media (min-width: $tablet) {
-        max-width: max-content;
-    }
-}
-
-//========================================================================================================================================================
 
 
 //breadcrumbs
