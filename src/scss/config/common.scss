@@ -108,40 +108,11 @@ h3 {
     }
 }
 
-//========================================================================================================================================================
+.page-title {
+    margin-bottom: 8px;
 
-
-
-//breadcrumbs
-.breadcrumbs {
-    display: flex;
-    margin-bottom: 10px;
-    list-style: none;
-}
-
-.breadcrumbs__item {
-    font-size: 14px;
-
-    &:not(:last-child) {
-        display: flex;
-        margin-right: 5px;
-
-        a {
-            margin-right: 5px;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        &::after {
-            content: '/';
-            display: block;
-        }
-    }
-
-    .breadcrumbs__item-current {
-        font-weight: 600;
+    @media (min-width: $tablet) {
+        margin-bottom: 12px;
     }
 }
 
@@ -195,4 +166,8 @@ p {
 
 .select {
     z-index: 1;
+}
+
+.full-width {
+    width: 100%;
 }

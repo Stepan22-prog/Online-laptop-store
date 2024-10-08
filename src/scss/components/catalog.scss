@@ -6,14 +6,6 @@
     }
 }
 
-.catalog-title {
-    margin-bottom: 8px;
-
-    @media (min-width: $tablet) {
-        margin-bottom: 12px;
-    }
-}
-
 .catalog__row {
     display: grid;
     align-items: start;
@@ -85,7 +77,7 @@
     border-top: 1px solid $secondaryColor;
 }
 
-.calalog__products {
+.products-list {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

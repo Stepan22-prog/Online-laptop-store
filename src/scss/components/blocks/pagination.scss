@@ -1,0 +1,61 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+    
+        svg {
+            fill: $secondaryColor;
+        }
+    
+        @media (min-width: $tablet) {
+            svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &_direction_right {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $primaryColor;
+        background: $secondaryColor;
+        border: 1px solid $secondaryColor;
+    
+        &_active {
+            color: $secondaryColor;
+            background: transparent;
+        }
+    
+        @media (min-width: $mobileB) {
+            min-width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+    
+        @media (min-width: $tablet) {
+            min-width: 35px;
+            height: 35px;
+            font-size: 22px;
+        }
+    }
+}
