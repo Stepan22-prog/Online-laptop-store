@@ -41,6 +41,8 @@
 @import 'components/blocks/form';
 @import 'components/blocks/breadcrumbs';
 @import 'components/blocks/pagination';
+@import 'components/blocks/filter';
+@import 'components/blocks/select';
 
 @import 'components/sections/header';
 @import 'components/popup';
@@ -48,8 +50,7 @@
 @import 'components/sections/categories';
 @import 'components/sections/new';
 @import 'components/callback';
-@import 'components/catalog';
-@import 'components/filter';
+@import 'components/sections/catalog';
 // @import 'components/contacts';
 @import 'components/product';
 @import 'components/gallery-popup';

@@ -7,172 +7,134 @@
 <body>
     <div class="wrapper">
         @@include('html/header.html')
-        <main class="page catalog">
-            <div class="page__container">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/">Головна</a></li>
-                    <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Ноутбуки</span></li>
-                </ul>
-                <div class="catalog__body">
-                    @@include('html/filter.html')
-                    <div class="calatlog__right-coloumn">
-                        <h1 class="catalog-title title-first">Ноутбуки</h1>
-                        <div class="catalog__row">
-                            <select data-speed="300" name="form[]" class="sort">
-                                <option value="1" selected>За зростанням ціни</option>
-                                <option value="2">За спаданням ціни</option>
-                            </select>
-                            <button data-type="filter" class="filter__btn">Фільтри</button>
-                        </div>
-                        <section class="calalog__products">
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <p class="product-card-price__old">19999 грн</p>
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                    </div>
-                                    <a href="./product.html" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <p class="product-card-price__old">19999 грн</p>
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                    </div>
-                                    <a href="" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <!-- <p class="product-card-price__old">19999 грн</p> -->
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                      </div>
-                                    <a href="./product.html" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <!-- <p class="product-card-price__old">19999 грн</p> -->
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                    </div>
-                                    <a href="./product.html" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <p class="product-card-price__old">19999 грн</p>
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                    </div>
-                                    <a href="./product.html" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <!-- <p class="product-card-price__old">19999 грн</p> -->
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                    </div>
-                                    <a href="./product.html" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                            <div class="product-card">
-                                <div class="product-card__img"><a href="./product.html"><img src="img/category.jpg"
-                                            alt="laptop"></a>
-                                </div>
-                                <h3 class="product-card__title"><a href="./product.html">Ноутбук 17.3" ASUS ROG Strix
-                                        SCAR
-                                        (G733PY-XS96)</a></h3>
-                                <div class="product-card__bottom">
-                                    <div class="product-card-price">
-                                        <p class="product-card-price__old">19999 грн</p>
-                                        <p class="product-card-price__actual">15000 грн</p>
-                                    </div>
-                                    <a href="./product.html" class="product-card__buy button">Придбати</a>
-                                </div>
-                            </div>
-                        </section>
-                        <div class="pagging">
-                            <a href="" class="pagging-arrow pagging-arrow_left">
-                                <svg width="28" height="28">
-                                    <use xlink:href="img/icons/icons.svg#arrow-blue"></use>
-                                </svg>
-                            </a>
-                            <ul class="pagging__list">
-                                <li>
-                                    <a href="#1" class="pagging__item">1</a>
-                                </li>
-                                <li>
-                                    <a href="#2" class="pagging__item pagging__item_active">2</a>
-                                </li>
-                                <li>
-                                    <a href="#3" class="pagging__item">3</a>
-                                </li>
-                                <li>
-                                    <span class="pagging__item">...</span>
-                                </li>
-                                <li>
-                                    <a href="#10" class="pagging__item">10</a>
-                                </li>
-                            </ul>
-                            <a href="" class="pagging-arrow pagging-arrow_right">
-                                <svg width="28" height="28">
-                                    <use xlink:href="img/icons/icons.svg#arrow-blue"></use>
-                                </svg>
-                            </a>
-                        </div>
+        <main class="page catalog container full-width">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="/">Головна</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Ноутбуки</span></li>
+            </ul>
+            <div class="catalog__body">
+                @@include('html/filter.html')
+                <div>
+                    <h1 class="title-first page-title">Ноутбуки</h1>
+                    <div class="catalog__row">
+                        <select data-speed="300" name="form[]" class="sort">
+                            <option value="1" selected>За зростанням ціни</option>
+                            <option value="2">За спаданням ціни</option>
+                        </select>
+                        <button data-type="filter" class="filter__btn">Фільтри</button>
                     </div>
+                    <section class="products-list">
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card__img">
+                                <a href="./product.html"><img src="img/category.jpg" alt="laptop"></a>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="./product.html">Ноутбук 17.3" ASUS ROG Strix SCAR (G733PY-XS96)</a>
+                            </h3>
+                            <div class="product-card__bottom">
+                                <div class="product-card__column">
+                                    <p class="product-card__price-old">19999 грн</p>
+                                    <p class="product-card__price-actual">15000 грн</p>
+                                </div>
+                                <a href="./product.html" class="product-card__buy button">Придбати</a>
+                            </div>
+                        </div>
+                    </section>
+                    @@include('html/pagination.html')
                 </div>
             </div>
-            <button class="to-top button-action">
-                <svg width="50" height="50">
-                    <use xlink:href="img/icons/icons.svg#more"></use>
-                </svg>
-            </button>
-            <button data-type="callback" class="callback__btn button-action">
-                <svg width="50" height="50">
-                    <use xlink:href="img/icons/icons.svg#phone"></use>
-                </svg>
-            </button>
+            @@include('html/to-top.html')
+            @@include('html/callback-btn.html')
         </main>
         @@include('html/footer.html')
         @@include('html/cart-popup.html')

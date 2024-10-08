@@ -171,3 +171,21 @@ p {
 .full-width {
     width: 100%;
 }
+
+.products-list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+
+    @media (min-width: $laptop) {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-items: start;
+    }
+
+    @media (min-width: 1350px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
