@@ -54,6 +54,26 @@
     }
 }
 
+.filter__reset {
+    font-size: 16px;
+    color: $primaryColor;
+    text-decoration: underline;
+    background: transparent;
+    margin: 0px 10px 16px 10px;
+    transition: 0.2s;
+
+    @media (min-width: $tablet) {
+        font-size: 18px;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $accentColor;
+            transition: 0.2s;
+        }
+    }
+}
+
 .filter-applied {
     margin: 10px;
     list-style: none;
@@ -62,19 +82,19 @@
         font-size: 18px;
         margin: 10px 15px;
     }
+}
+
+.filter-applied__item {
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
 
     ul {
         list-style: none;
     }
 }
 
-.filter-applied-item {
-    &:not(:last-child) {
-        margin-bottom: 16px;
-    }
-}
-
-.filter-applied-item__title {
+.filter-applied__title {
     font-size: 16px;
     padding: 6px;
     color: $primaryColor;
@@ -88,7 +108,7 @@
     }
 }
 
-.filter-applied-item__option {
+.filter-applied__option {
     margin-left: 8px;
 
     &:not(:last-child) {
@@ -119,30 +139,6 @@
         }
     }
 }
-
-.filter__body {}
-
-.filter-reset {
-    font-size: 16px;
-    color: $primaryColor;
-    text-decoration: underline;
-    background: transparent;
-    margin: 0px 10px 16px 10px;
-    transition: 0.2s;
-
-    @media (min-width: $tablet) {
-        font-size: 18px;
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: $accentColor;
-            transition: 0.2s;
-        }
-    }
-}
-
-.filter-group {}
 
 .filter-group__title {
     position: relative;
@@ -178,7 +174,7 @@
     }
 }
 
-.filter-group__title_price {
+.filter-group__title_no-arrow {
     &::after {
         display: none;
     }
