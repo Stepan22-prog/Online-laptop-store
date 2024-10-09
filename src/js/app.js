@@ -97,8 +97,8 @@ if (document.querySelector('.gallery__slider')) {
     spaceBetween: 10,
     speed: 800,
     navigation: {
-      nextEl: '.gallery-popup-next',
-      prevEl: '.gallery-popup-prev',
+      nextEl: '.gallery-popup__next',
+      prevEl: '.gallery-popup__prev',
     },
     zoom: true,
     maxRatio: 2,

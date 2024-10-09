@@ -1,12 +1,7 @@
-.gallery-popup {
-    .popup__container {
-        display: flex;
-        align-items: center;
-    }
-}
-
 .gallery-popup__content {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .gallery-popup__slider {
@@ -29,13 +24,13 @@
     z-index: 2;
 }
 
-.gallery-popup-prev {
+.gallery-popup__prev {
     display: block;
     z-index: 2;
-    transform: translate(-30%);
+    transform: translate(-10%);
 }
 
-.gallery-popup-next {
+.gallery-popup__next {
     display: block;
     z-index: 2;
 }
