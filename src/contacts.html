@@ -7,64 +7,58 @@
 <body>
     <div class="wrapper">
         @@include('html/header.html')
-        <main class="page contacts">
-            <div class="page__container">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/">Головна</a></li>
-                    <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Контакти</span></li>
-                </ul>
-                <h1 class="title-first">Контакти</h1>
-                <div class="contacts__body">
-                    <div class="contacts__left-column">
-                        <div class="phones">
-                            <h2 class="phones__title title-second">Телефони</h2>
-                            <ul class="phones__list">
-                                <li class="phones__item"><a href="">+38065464466</a></li>
-                                <li class="phones__item"><a href="">+38065464466</a></li>
-                                <li class="phones__item"><a href="">+38065464466</a></li>
-                            </ul>
-                        </div>
-                        <form action="" method="post" class="form">
-                            <h2 class="form__title title-second">Зворотній зв'язок</h2>
-                            <div class="form__block">
-                                <label for="name" class="form__label">Ваше ім'я та прізвище</label>
-                                <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
-                            </div>
-                            <div class="form__block _half-row">
-                                <label for="email" class="form__label">Електронна пошта</label>
-                                <input id="email" class="form__input" type="email" name="email" placeholder="mail@mail.com"
-                                    required>
-                            </div>
-                            <div class="form__block _half-row">
-                                <label for="phone" class="form__label">Телефон</label>
-                                <input id="phone" class="form__input" type="tel" name="phone" placeholder="+38 (___) ___-____"
-                                    required>
-                            </div>
-                            <div class="form__block">
-                                <label for="comment" class="form__label">Коментар до замовлення</label>
-                                <textarea id="comment" class="form__textarea" name="comment" cols="20" rows="10" required></textarea>
-                            </div>
-                            <div class="form__footer">
-                                <button class="form__btn button" type="submit">Надіслати</button>
-                            </div>
-                        </form>
+        <main class="page contacts container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="/">Головна</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Контакти</span></li>
+            </ul>
+            <h1 class="title-first">Контакти</h1>
+            <div class="contacts__body">
+                <div class="contacts__left-column">
+                    <div class="contacts__phones">
+                        <h2 class="contacts__phones-title title-second">Телефони</h2>
+                        <ul class="list">
+                            <li class="list__item contacts__phones-item link"><a href="/">+38065464466</a></li>
+                            <li class="list__item contacts__phones-item link"><a href="/">+38065464466</a></li>
+                            <li class="list__item contacts__phones-item link"><a href="/">+38065464466</a></li>
+                        </ul>
                     </div>
-                    <div class="map">
-                        <h2 class="map__title title-second">Розташування магазину</h2>
-                        <div class="map__iframe">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.2856040592796!2d35.03175511527204!3d48.52904652956988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d959dd81bfa351%3A0xc486dacaf2b968c9!2z0JrQsNGA0LDQstCw0L0!5e0!3m2!1sru!2sua!4v1688201465699!5m2!1sru!2sua"
-                                style="border:0;" allowfullscreen="true" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <form action="" method="post" class="form">
+                        <h2 class="form__title title-second">Зворотній зв'язок</h2>
+                        <div class="form__block">
+                            <label for="name" class="form__label">Ваше ім'я та прізвище</label>
+                            <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
                         </div>
+                        <div class="form__block form__block_half-row">
+                            <label for="email" class="form__label">Електронна пошта</label>
+                            <input id="email" class="form__input" type="email" name="email" placeholder="mail@mail.com"
+                                required>
+                        </div>
+                        <div class="form__block form__block_half-row">
+                            <label for="phone" class="form__label">Телефон</label>
+                            <input id="phone" class="form__input" type="tel" name="phone" placeholder="+38 (___) ___-____"
+                                required>
+                        </div>
+                        <div class="form__block">
+                            <label for="comment" class="form__label">Коментар до замовлення</label>
+                            <textarea id="comment" class="form__textarea" name="comment" cols="20" rows="10" required></textarea>
+                        </div>
+                        <div class="form__footer">
+                            <button class="form__btn button" type="submit">Надіслати</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contacts__map map">
+                    <h2 class="map__title title-second">Розташування магазину</h2>
+                    <div class="map__iframe">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.2856040592796!2d35.03175511527204!3d48.52904652956988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d959dd81bfa351%3A0xc486dacaf2b968c9!2z0JrQsNGA0LDQstCw0L0!5e0!3m2!1sru!2sua!4v1688201465699!5m2!1sru!2sua"
+                            style="border:0;" allowfullscreen="true" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
-            <button class="to-top button-action">
-                <svg width="50" height="50">
-                    <use xlink:href="img/icons/icons.svg#more"></use>
-                </svg>
-            </button>
+            @@include('html/to-top.html')
         </main>
         @@include('html/footer.html')
         @@include('html/cart-popup.html')
