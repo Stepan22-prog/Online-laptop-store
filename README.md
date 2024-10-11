@@ -7,6 +7,7 @@ This site uses a [starter template](https://template.fls.guru/) with gulp and we
 
  - HTML
  - SCSS
+ - BEM
  - JS
  - Swiper slider
  - nouislider
