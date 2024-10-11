@@ -1,12 +1,3 @@
-.reviews__title {
-    margin-bottom: 15px;
-}
-
-.reviews__form {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
 .rating {
     display: flex;
     align-items: center;
@@ -75,9 +66,6 @@
     }
 }
 
-//========================================================================================================================================================
-
-//reviews__list
 .reviews__list {
     list-style: none;
     margin-bottom: 25px;
@@ -120,12 +108,12 @@
     margin-right: 20px;
 }
 
-.user-rating {
+.reviews-item__rating {
     display: flex;
     align-items: center;
 }
 
-.user-rating__list {
+.reviews-item__rating-list {
     margin-right: 5px;
 
     @media (min-width: $tablet) {
@@ -133,12 +121,12 @@
     }
 }
 
-.user-rating__item {
+.reviews-item-rating__item {
     font-size: 18px;
     letter-spacing: -4px;
     color: $additionalColor;
 
-    &._active {
+    &_active {
         color: $accentColor;
     }
 
@@ -147,7 +135,7 @@
     }
 }
 
-.user-rating__value {
+.reviews-item__rating-value {
     @media (min-width: $tablet) {
         font-size: 18px;
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 @@include('html/head.html', {
 'title': 'Відгуки'
 })
@@ -7,111 +7,101 @@
 <body>
     <div class="wrapper">
         @@include('html/header.html')
-        <main class="page reviews">
-            <div class="page__container">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/">Головна</a></li>
-                    <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Відгуки</span></li>
-                </ul>
-                <h1 class="reviews__title title-first">Відгуки</h1>
-                <form action="" method="post" class="reviews-form form">
-                    <div class="form__block _half-row">
-                        <label for="name" class="form__label">Ваше ім'я та прізвище</label>
-                        <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
-                    </div>
-                    <div class="form__block _half-row">
-                        <label class="form__label">Оцінки</label>
-                        <div class="rating">
-                            <div class="rating__body">
-                                <div class="rating__items">
-                                    <input id="rating__5" type="radio" class="rating__item" value="5" name="rating">
-                                    <label for="rating__5" class="rating__label"></label>
-                                    <input id="rating__4" type="radio" class="rating__item" value="4" name="rating"
-                                        checked>
-                                    <label for="rating__4" class="rating__label"></label>
-                                    <input id="rating__3" type="radio" class="rating__item" value="3" name="rating">
-                                    <label for="rating__3" class="rating__label"></label>
-                                    <input id="rating__2" type="radio" class="rating__item" value="2" name="rating">
-                                    <label for="rating__2" class="rating__label"></label>
-                                    <input id="rating__1" type="radio" class="rating__item" value="1" name="rating">
-                                    <label for="rating__1" class="rating__label"></label>
-                                </div>
-                            </div>
-                            <span class="rating__value">4</span>
-                        </div>
-                    </div>
-                    <div class="form__block _half-row">
-                        <label for="review" class="form__label">Відгук</label>
-                        <textarea id="review" class="form__textarea" name="review" cols="20" rows="10" required></textarea>
-                    </div>
-                    <div class="form__footer">
-                        <button class="form__btn button" type="submit">Відправити</button>
-                    </div>
-                </form>
-                <ul class="reviews__list">
-                    <li class="reviews-item">
-                        <div class="reviews-item__header">
-                            <h2 class="reviews-item__title">Стаднюк Степан Романович</h2>
-                            <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
-                            <div class="user-rating">
-                                <div class="user-rating__list">
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item">★</span>
-                                </div>
-                                <div class="user-rating__value">4</div>
+        <main class="page reviews container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="/">Головна</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__item-current">Відгуки</span></li>
+            </ul>
+            <h1 class="title-first page-title">Відгуки</h1>
+            <form action="" method="post" class="form">
+                <div class="form__block form__block_half-row">
+                    <label for="name" class="form__label">Ваше ім'я та прізвище</label>
+                    <input id="name" class="form__input" type="text" name="name" placeholder="ПІБ" required>
+                </div>
+                <div class="form__block form__block_half-row">
+                    <label class="form__label">Оцінки</label>
+                    <div class="rating">
+                        <div class="rating__body">
+                            <div class="rating__items">
+                                <input id="rating__5" type="radio" class="rating__item" value="5" name="rating">
+                                <label for="rating__5" class="rating__label"></label>
+                                <input id="rating__4" type="radio" class="rating__item" value="4" name="rating"
+                                    checked>
+                                <label for="rating__4" class="rating__label"></label>
+                                <input id="rating__3" type="radio" class="rating__item" value="3" name="rating">
+                                <label for="rating__3" class="rating__label"></label>
+                                <input id="rating__2" type="radio" class="rating__item" value="2" name="rating">
+                                <label for="rating__2" class="rating__label"></label>
+                                <input id="rating__1" type="radio" class="rating__item" value="1" name="rating">
+                                <label for="rating__1" class="rating__label"></label>
                             </div>
                         </div>
-                        <p class="review-item__text">Замовляв ноутбук для роботи, і залишився дуже задоволений! Менеджери магазину швидко допомогли вибрати оптимальний варіант, який відповідав моїм вимогам і бюджету. Доставка була оперативною, а ноутбук прийшов добре запакованим і в ідеальному стані. Дуже задоволений покупкою, обов’язково буду звертатися ще!</p>
-                    </li>
-                    <li class="reviews-item">
-                        <div class="reviews-item__header">
-                            <h2 class="reviews-item__title">Користувач 1</h2>
-                            <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
-                            <div class="user-rating">
-                                <div class="user-rating__list">
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                </div>
-                                <div class="user-rating__value">5</div>
+                        <span class="rating__value">4</span>
+                    </div>
+                </div>
+                <div class="form__block form__block_half-row">
+                    <label for="review" class="form__label">Відгук</label>
+                    <textarea id="review" class="form__textarea" name="review" cols="20" rows="10" required></textarea>
+                </div>
+                <div>
+                    <button class="form__btn button" type="submit">Відправити</button>
+                </div>
+            </form>
+            <ul class="reviews__list">
+                <li class="reviews-item">
+                    <div class="reviews-item__header">
+                        <h2 class="reviews-item__title">Стаднюк Степан Романович</h2>
+                        <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
+                        <div class="reviews-item__rating">
+                            <div class="reviews-item__rating-list">
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item">★</span>
                             </div>
+                            <div class="reviews-item__rating-value">4</div>
                         </div>
-                        <p class="review-item__text">Придбав монітор і жорсткий диск для апгрейду свого ПК. Магазин має великий вибір, і консультанти дуже добре орієнтуються в асортименті. Все прийшло швидко, у надійній упаковці, товар відповідає опису на сайті. Працює відмінно! Дякую за гарний сервіс і доступні ціни.</p>
-                    </li>
-                    <li class="reviews-item">
-                        <div class="reviews-item__header">
-                            <h2 class="reviews-item__title">Користувач 2</h2>
-                            <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
-                            <div class="user-rating">
-                                <div class="user-rating__list">
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item _active">★</span>
-                                    <span class="user-rating__item">★</span>
-                                    <span class="user-rating__item">★</span>
-                                </div>
-                                <div class="user-rating__value">3</div>
+                    </div>
+                    <p class="review-item__text">Замовляв ноутбук для роботи, і залишився дуже задоволений! Менеджери магазину швидко допомогли вибрати оптимальний варіант, який відповідав моїм вимогам і бюджету. Доставка була оперативною, а ноутбук прийшов добре запакованим і в ідеальному стані. Дуже задоволений покупкою, обов’язково буду звертатися ще!</p>
+                </li>
+                <li class="reviews-item">
+                    <div class="reviews-item__header">
+                        <h2 class="reviews-item__title">Користувач 1</h2>
+                        <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
+                        <div class="reviews-item__rating">
+                            <div class="reviews-item__rating-list">
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
                             </div>
+                            <div class="reviews-item__rating-value">5</div>
                         </div>
-                        <p class="review-item__text">Купував у цьому магазині вже кілька разів, завжди задоволений сервісом. Цього разу брав ігрову мишу і клавіатуру – якість на висоті, а ціна приємно здивувала. Окремо хочу відзначити швидку консультацію та можливість самовивозу. Рекомендую всім, хто шукає якісну комп’ютерну техніку!</p>
-                    </li>
-                </ul>
-            </div>
-            <button class="to-top button-action">
-                <svg width="50" height="50">
-                    <use xlink:href="img/icons/icons.svg#more"></use>
-                </svg>
-            </button>
-            <button data-type="callback" class="callback__btn button-action">
-                <svg width="50" height="50">
-                    <use xlink:href="img/icons/icons.svg#phone"></use>
-                </svg>
-            </button>
+                    </div>
+                    <p class="review-item__text">Придбав монітор і жорсткий диск для апгрейду свого ПК. Магазин має великий вибір, і консультанти дуже добре орієнтуються в асортименті. Все прийшло швидко, у надійній упаковці, товар відповідає опису на сайті. Працює відмінно! Дякую за гарний сервіс і доступні ціни.</p>
+                </li>
+                <li class="reviews-item">
+                    <div class="reviews-item__header">
+                        <h2 class="reviews-item__title">Користувач 2</h2>
+                        <time class="reviews-item__date" datetime="2020-01-20">01.02.2023</time>
+                        <div class="reviews-item__rating">
+                            <div class="reviews-item__rating-list">
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item reviews-item-rating__item_active">★</span>
+                                <span class="reviews-item-rating__item">★</span>
+                                <span class="reviews-item-rating__item">★</span>
+                            </div>
+                            <div class="reviews-item__rating-value">3</div>
+                        </div>
+                    </div>
+                    <p class="review-item__text">Купував у цьому магазині вже кілька разів, завжди задоволений сервісом. Цього разу брав ігрову мишу і клавіатуру – якість на висоті, а ціна приємно здивувала. Окремо хочу відзначити швидку консультацію та можливість самовивозу. Рекомендую всім, хто шукає якісну комп’ютерну техніку!</p>
+                </li>
+            </ul>
+            @@include('html/callback-btn.html')
+            @@include('html/to-top.html')
         </main>
         @@include('html/footer.html')
         @@include('html/cart-popup.html')
